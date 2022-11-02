@@ -29,12 +29,10 @@ export const DivText = styled.div`
   width: 56rem;
   height: 100%;
 
-
 `
 
 export const DivImg = styled.div`
-
-
+ margin-left: 0.2rem;
 `
 export const TextoPrincipal = styled.h2`
 
@@ -98,7 +96,6 @@ export const Main = styled.main`
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
   margin-top: 5.6rem;
-
 
 `
 
