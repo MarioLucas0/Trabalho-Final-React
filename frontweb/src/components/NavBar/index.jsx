@@ -13,6 +13,9 @@ export const NavBar = () => (
         <li>
           <Link to="/catalogo">Catalogo</Link>
         </li>
+        <li>
+          <Link to="/admin">Admin</Link>
+        </li>
       </Ul>
     </Nav>
   </Header>

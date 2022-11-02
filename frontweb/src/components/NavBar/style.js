@@ -8,6 +8,9 @@ export const Header =  styled.header`
   align-items: center;
   background: #407BFF;
 
+  box-shadow: 0px 20px 20px white;
+  z-index: 1;
+
   span {
 
   font-weight: 700;

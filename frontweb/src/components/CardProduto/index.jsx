@@ -1,10 +1,13 @@
-import teste from '../../assets/img/teste.svg';
 
+import teste from '../../assets/img/teste.svg';
 import {
   DivContainer, DivImg, DivInfo, DivPreco, H2NomeProduto
 } from "./style";
 
-export const CardProduto = () => (
+export const CardProduto = () => {
+
+
+  return (
    <DivContainer>
     <DivImg>
       <img src={teste} alt="" />
@@ -17,4 +20,5 @@ export const CardProduto = () => (
         </DivPreco>
     </DivInfo>
    </DivContainer>
-);
+  )
+};
