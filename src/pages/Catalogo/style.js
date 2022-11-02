@@ -20,6 +20,18 @@ export const DivInputs = styled.div`
   border-radius: 10px;
   display: flex;
   align-items: center;
+  margin-bottom: 3rem;
+
+  button {
+
+    width: 21.7rem;
+    height: 3.8rem;
+    border-radius: 10px;
+    margin-left: 1.7rem;
+    background: #FFFFFF;
+    border: 1px solid #E1E1E1;
+    cursor: pointer;
+  }
 
  
   
@@ -29,16 +41,18 @@ export const DivInputs = styled.div`
 export const DivInput = styled.div`
 
   width: 39rem;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #E1E1E1;
   display: flex;
   justify-content: space-between;
   margin-left: 1.2rem;
 
   input[type="text"] {
-
+    
+  width: 29rem;
   height: 2.8rem;
   border: none;
   outline: 0;
+  
 
   }
 
