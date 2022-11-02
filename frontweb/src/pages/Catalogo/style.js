@@ -43,13 +43,14 @@ export const DivInput = styled.div`
   justify-content: space-between;
   margin-left: 1.2rem;
 
-  input[type="text"] {
+  input[type="text"]
+   {
     
-  width: 29rem;
-  height: 2.8rem;
-  border: none;
-  outline: 0;
-  
+    width: 29rem;
+    height: 2.8rem;
+    border: none;
+    outline: 0;
+    
 
   }
 

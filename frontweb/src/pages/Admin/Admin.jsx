@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Pesquisa from "../../assets/img/Pesquisa.svg";
 import teste from "../../assets/img/teste.svg";
 import { MenuAdmin } from "../../components/MenuAdmin";
@@ -8,13 +9,17 @@ import {
 
 export const Admin = () => {
     
+  
 
     return (
     <Section >
     <MenuAdmin />
         <Main>
         <DivInputs>
-            <Button>ADICIONAR</Button>
+            <Link to="/admin/produto/cadastro" >
+                <Button>ADICIONAR</Button>  
+            </Link>
+            
                 <DivInput>
                     <input type="text" placeholder="Nome do produto"/>
                     <img src={Pesquisa} alt="" />

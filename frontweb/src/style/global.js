@@ -11,11 +11,12 @@ const GlobalStyle = createGlobalStyle`
   }
   body {
     background-color: #E5E5E5;
-  }
+  } 
 
   html {
     font-size: 62.5%;
     height: 100vh;
+    
   }
 
   img {
