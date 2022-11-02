@@ -9,9 +9,13 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     list-style: none;
   }
+  body {
+    background-color: #E5E5E5;
+  }
 
   html {
     font-size: 62.5%;
+    height: 100vh;
   }
 
   img {

@@ -4,15 +4,13 @@ import { Home } from '../../pages/Home';
 
 
 
-export const Content = props => (
+export const Content = () => (
     
-  <main className="content">
-
     <Routes>
       <Route path="/" element={<Home />} exact={true}/>
       <Route path="/catalogo" element={ <Catalogo /> } />
     </Routes>
   
-  </main>
+
 );
 
