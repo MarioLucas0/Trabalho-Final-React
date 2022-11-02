@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
-import { Main, Nav, Ul } from './style';
+import { Header, Nav, Ul } from './style';
 
 export const NavBar = () => (
     
-  <Main className="menu">
+  <Header className="menu">
+       <span>SerraCommerce</span>
     <Nav>
       <Ul>
         <li>
@@ -14,6 +15,6 @@ export const NavBar = () => (
         </li>
       </Ul>
     </Nav>
-  </Main>
+  </Header>
 );
 
