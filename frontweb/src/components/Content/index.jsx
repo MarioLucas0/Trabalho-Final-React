@@ -12,7 +12,7 @@ export const Content = () => (
     <Routes>
       <Route path="/" element={<Home />} exact={true}/>
       <Route path="/catalogo" element={ <Catalogo /> } />
-      <Route path="/admin" element={ <Admin /> } />
+      <Route path="/admin/produto" element={ <Admin /> } />
       <Route path="/catalogo/:id" element={ <ProdutoInfo /> } />
       <Route path="*" element={<NotFound />}/>
     </Routes>

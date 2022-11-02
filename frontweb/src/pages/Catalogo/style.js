@@ -33,9 +33,6 @@ export const DivInputs = styled.div`
     cursor: pointer;
   }
 
- 
-  
-
 `
 
 export const DivInput = styled.div`

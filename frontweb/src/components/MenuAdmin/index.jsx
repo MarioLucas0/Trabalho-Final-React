@@ -8,7 +8,7 @@ export const MenuAdmin = () => (
     <Nav>
       <Ul>
         <li>
-          <Link to="/">Produtos</Link>
+          <Link to="/admin/produto">Produtos</Link>
         </li>
         <li>
           <Link to="/catalogo">Categorias</Link>
