@@ -1,7 +1,9 @@
 
 import { Link } from "react-router-dom";
+import compra from "../../../assets/img/compra.svg";
 import {
-  DivContainer, DivImg, DivInfo, DivPreco, H2NomeProduto
+  DivContainer, DivImg, DivInfo,
+  DivPreco, H2NomeProduto, IconCompra
 } from "./style";
 
 export const CardProduto = ({produto}) => {
@@ -22,7 +24,12 @@ export const CardProduto = ({produto}) => {
           <p>R$</p>
           <span>{produto?.valorUnitario}</span>
         </DivPreco>
+    
     </DivInfo>
+    <IconCompra>
+          <img src={compra} alt="" />
+        </IconCompra>
+        
    </DivContainer>
   )
 };

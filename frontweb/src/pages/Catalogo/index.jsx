@@ -23,6 +23,8 @@ export const Catalogo = () => {
       .then((response) => {
       setProdutos(response.data.content)
       ctx.setProduto(response.data.content)
+
+      console.log(response)
       
     
     }).catch((err) => {

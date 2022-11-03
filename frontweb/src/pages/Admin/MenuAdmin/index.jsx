@@ -14,7 +14,7 @@ export const MenuAdmin = () => (
           <Link to="/catalogo">Categorias</Link>
         </li>
         <li>
-          <Link to="/cliente">Cliente</Link>
+          <Link to="/cliente">Pedido</Link>
         </li>
       </Ul>
     </Nav>

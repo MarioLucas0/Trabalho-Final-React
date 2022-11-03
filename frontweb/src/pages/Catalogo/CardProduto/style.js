@@ -3,7 +3,6 @@ import styled from 'styled-components'
 export const DivContainer = styled.div`
 
   width: 24.7rem;
-  height: 31.6rem;
   display: flex;
   flex-direction: column;
   background: #FFFFFF;
@@ -11,6 +10,17 @@ export const DivContainer = styled.div`
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
 
 `
+export const IconCompra= styled.div`
+
+  cursor: pointer;
+  width: 5rem;
+  display: flex;
+  margin-left: 3rem;
+
+
+ 
+`
+
 
 
 export const DivImg = styled.div`
@@ -34,7 +44,8 @@ export const DivImg = styled.div`
 export const DivInfo = styled.div`
 
   width: 100%;
-  padding: 1.4rem 1.9rem 3.2rem 2.1rem;
+  padding: 1.4rem 1.9rem 0 2.1rem;
+  height: 100%;
 
 
 `

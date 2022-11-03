@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import api from "../../services/api";
 import { ButtonEditar, ButtonExcluir, Categoria, DivButtons, DivContainer, DivImg, DivInfo, DivPreco, H2NomeProduto } from "./style";
 
@@ -6,12 +7,14 @@ import { ButtonEditar, ButtonExcluir, Categoria, DivButtons, DivContainer, DivIm
 export const ProdutoCrud = ({produto}) => {
     const excluirProduto = () => {
        
-        api.delete(`/produtos/${produto.id}`).then(res => {
+       api.delete(`/produtos/${produto.id}`).then(res => {
             console.log(res)
-        })
+          
+        }) 
      
       }
 
+ 
 
     return (
     <DivContainer>
@@ -24,10 +27,12 @@ export const ProdutoCrud = ({produto}) => {
           <p>R$</p>
           <span>{produto?.valorUnitario}</span>
           </DivPreco>
-          <Categoria>Categoria</Categoria>
+          <Categoria>{produto?.categoria.nome}</Categoria>
       </DivInfo>
       <DivButtons>
+        <Link to={`/admin/produto/${produto.id}/atualizar`}>
           <ButtonEditar>EDITAR</ButtonEditar>
+        </Link>
           <ButtonExcluir onClick={excluirProduto}>EXCLUIR</ButtonExcluir>
       </DivButtons>
 
