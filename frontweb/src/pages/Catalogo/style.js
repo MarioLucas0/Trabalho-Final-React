@@ -14,7 +14,7 @@ export const H1Inicial = styled.h1`
 export const DivInputs = styled.div`
 
   width: 65rem;
-  height: 8rem;
+  height: 5.5rem;
   background: #FFFFFF;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
   border-radius: 10px;

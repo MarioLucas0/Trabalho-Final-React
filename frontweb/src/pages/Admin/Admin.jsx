@@ -1,16 +1,31 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Pesquisa from "../../assets/img/Pesquisa.svg";
-import teste from "../../assets/img/teste.svg";
-import { MenuAdmin } from "../../components/MenuAdmin";
+import { ProdutoCrud } from "../../components/ProdutoCrud";
+import api from "../../services/api";
+import { MenuAdmin } from "./MenuAdmin";
 import {
-    Button, ButtonEditar, ButtonExcluir, Categoria, DivButtons, DivContainer, DivImg, DivInfo,
-    DivInput, DivInputs, DivPreco, H2NomeProduto, Main, Section
+    Button, DivCardCrud, DivInput, DivInputs,
+    Main, Section
 } from "./style";
 
 export const Admin = () => {
-    
-  
 
+    const [produto,setProduto] = useState([])
+    
+
+    useEffect(() => {
+        api.get("/produtos")
+          .then((response) => {
+          setProduto(response.data.content)
+    
+        }).catch((err) => {
+            console.error("ops! ocorreu um erro" + err);
+          })
+          
+      }, []);
+
+     
     return (
     <Section >
     <MenuAdmin />
@@ -27,27 +42,12 @@ export const Admin = () => {
                 </DivInput>
         </DivInputs>
 
+        <DivCardCrud>
+            {produto?.map((produto,index) => (
+                <ProdutoCrud produto={produto} key={index} />
+            ))}
 
-        <DivContainer>
-
-            <DivImg>
-            <img src={teste} alt="" />
-            </DivImg>
-            <DivInfo>
-                <H2NomeProduto>Computador Desktop - Intel Core i7</H2NomeProduto>
-                <DivPreco>
-                <p>R$</p>
-                <span>2.779,00</span>
-                </DivPreco>
-                <Categoria>Categoria</Categoria>
-            </DivInfo>
-
-            <DivButtons>
-                <ButtonEditar>EDITAR</ButtonEditar>
-                <ButtonExcluir>EXCLUIR</ButtonExcluir>
-            </DivButtons>
-
-        </DivContainer>
+        </DivCardCrud>
 
         </Main>
     </Section>

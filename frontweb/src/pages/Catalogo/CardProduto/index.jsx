@@ -1,16 +1,16 @@
 
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   DivContainer, DivImg, DivInfo, DivPreco, H2NomeProduto
 } from "./style";
 
 export const CardProduto = ({produto}) => {
 
-  const { id } = useParams()
+ 
   return (
     
    <DivContainer>
-    <Link to={`/catalogo/${id}`}>
+    <Link to={`/catalogo/${produto.id}`}>
     <DivImg>
       <img src={produto?.imagemUrl} alt="" />
     </DivImg>

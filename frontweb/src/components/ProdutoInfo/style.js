@@ -71,6 +71,8 @@ export const DivImg = styled.div`
   justify-content: center;
   img {
     width: 65%;
+    max-width: 35rem;
+    height: 35rem ;
   }
 
 `

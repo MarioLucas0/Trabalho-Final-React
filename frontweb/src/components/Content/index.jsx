@@ -1,9 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
 import { Admin } from '../../pages/Admin/Admin';
+import { CadastroProduto } from '../../pages/Admin/CadastroProduto';
 import { Catalogo } from '../../pages/Catalogo/index';
 import { Home } from '../../pages/Home';
 import NotFound from '../../pages/NotFound';
-import { CadastroProduto } from '../CadastroProduto';
+
 import { ProdutoInfo } from '../ProdutoInfo';
 
 

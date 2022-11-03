@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
 import Pesquisa from "../../assets/img/Pesquisa.svg";
-import { CardProduto } from "../../components/CardProduto";
+import { context } from "../../context";
 import api from '../../services/api';
+import CardLoader from "./CardLoader";
+import { CardProduto } from "./CardProduto";
 import {
   ButtonLimpar, DivCards, DivContainer, DivInput, DivInputs, H1Inicial,
   Section
@@ -11,28 +12,35 @@ export const Catalogo = () => {
 
   const [produtos, setProdutos] = useState();
   const [busca, setBusca] = useState("");
+  const [isLoading, setIsLoading] = useState(false)
+  const ctx = useContext(context)
 
 
   useEffect(() => {
-    const param = {}
 
-    if(busca) {
-      useParams.title = busca
-    }
-    api.get("/produtos", {param})
+    setIsLoading(true)
+    api.get("/produtos")
       .then((response) => {
-      setProdutos(response.data)
-      console.log(response.data)
+      setProdutos(response.data.content)
+      ctx.setProduto(response.data.content)
+      
     
-    })
-      .catch((err) => {
+    }).catch((err) => {
         console.error("ops! ocorreu um erro" + err);
+      }).finally(() => {
+        setIsLoading(false)
       });
-  }, [busca]);
+      
+  }, []);
 
+  const limpar = () => {
+    if(busca != "") {
+      setBusca("")
+    }
+  }
 
+  const produtosFiltrados = produtos?.filter((produto) => produto.nome.includes(busca))
 
-  //const produtosFiltrados = produtos?.filter((produto) => produto.)
 
   return (
       <Section>
@@ -40,17 +48,17 @@ export const Catalogo = () => {
           <H1Inicial>Catálogo de produtos</H1Inicial>
           <DivInputs>
             <DivInput>
-              <input type="text" placeholder="Nome do produto" value={busca} onChange={(e) => {setBusca(e.target.value) 
-                 console.log(busca)}}/>
+              <input type="text" placeholder="Nome do produto" value={busca}  onChange={(e) => setBusca(e.target.value)}/>
               <img src={Pesquisa} alt="" />
             </DivInput>
-              <ButtonLimpar>Limpar Filtro</ButtonLimpar> 
+              <ButtonLimpar onClick={limpar}>Limpar Filtro</ButtonLimpar> 
           </DivInputs>
            
           <DivCards>
-            {produtos?.map((prod,index) => (
+            {isLoading ? <CardLoader /> : (
+              produtosFiltrados?.map((prod,index) => (
               <CardProduto produto={prod} key={index}/>
-            ))}
+            )))}
           </DivCards>
           
        
