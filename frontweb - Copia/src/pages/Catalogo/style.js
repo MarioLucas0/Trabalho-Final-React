@@ -14,7 +14,7 @@ export const H1Inicial = styled.h1`
 export const DivInputs = styled.div`
 
   width: 65rem;
-  height: 8rem;
+  height: 6rem;
   background: #FFFFFF;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
@@ -22,24 +22,18 @@ export const DivInputs = styled.div`
   align-items: center;
   margin-bottom: 3rem;
 
+  button {
 
-
-`
-
-
-export const ButtonLimpar = styled.button`
-
-    width: 20rem;
-    height: 3.5rem;
+    width: 21.7rem;
+    height: 3.8rem;
     border-radius: 10px;
     margin-left: 1.7rem;
     background: #FFFFFF;
     border: 1px solid #E1E1E1;
     cursor: pointer;
-    margin-block: 1rem;
+  }
 
 `
-
 
 export const DivInput = styled.div`
 
@@ -62,16 +56,11 @@ export const DivInput = styled.div`
 
 
 `
-export const DivCards = styled.div`
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 3.5rem;
-`
 
 export const Section = styled.section`
 
   width: 100%;
-  height: 100vh;
+  height: 80%;
 
 `
 

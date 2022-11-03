@@ -12,21 +12,11 @@ export const DivContainer = styled.div`
 
 `
 
-
 export const DivImg = styled.div`
 
   width: 100%;
   padding:1.8rem  4.9rem  0.7rem 3.9rem;
   border: 1px solid #E1E1E1;
-  display: flex;
-  justify-content: center;
-
-
-  img {
-    max-width: 15.8rem;
-    height: 15.8rem;
-    border-radius: 10px;
-  }
 
 `
 
