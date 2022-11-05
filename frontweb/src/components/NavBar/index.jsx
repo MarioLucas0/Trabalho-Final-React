@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import carrinho from "../../assets/img/compra.svg";
-import { context } from "../../context";
+import { context } from "../../context/index";
 import { DivRight, Header, Nav, Ul } from './style';
 
 export const NavBar = () => {
@@ -20,6 +20,9 @@ export const NavBar = () => {
           </li>
           <li>
             <Link to="/admin/produto">Admin</Link>
+          </li>
+          <li>
+            <Link to="/login">Login</Link>
           </li>
         </Ul>
       </Nav>

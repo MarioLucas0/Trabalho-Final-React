@@ -6,6 +6,7 @@ import { CategoriaInfo } from '../../pages/Admin/Categoria';
 import { CadastrarCategoria } from '../../pages/Admin/Categoria/CadastrarCategoria';
 import { AtualizarCategoria } from '../../pages/Admin/Categoria/CategoriaAtualizar';
 import { CarrinhoCompras } from '../../pages/Catalogo/CarrinhoDeCompras';
+import {Login} from "../../pages/Login/index"
 
 import { Catalogo } from '../../pages/Catalogo/index';
 import { Home } from '../../pages/Home';
@@ -28,6 +29,7 @@ export const Content = () => (
       <Route path="/admin/categoria/:id/atualizar" element={ <AtualizarCategoria /> } />
       <Route path="/admin/categoria" element={ <CategoriaInfo />} />
       <Route path="/catalogo/:id" element={ <ProdutoInfo /> } />
+      <Route path="/login" element={<Login/>}/>
    
       <Route path="*" element={<NotFound />}/>
 
