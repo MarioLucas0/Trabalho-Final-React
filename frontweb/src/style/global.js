@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    outline: 0;
   }
   body {
     background-color: #E5E5E5;
@@ -15,8 +16,14 @@ const GlobalStyle = createGlobalStyle`
 
   html {
     font-size: 62.5%;
-    height: 100vh;
+    height: 100%;
     
+  }
+  body {
+  
+   min-height:100%;
+   position:relative;
+
   }
 
   img {

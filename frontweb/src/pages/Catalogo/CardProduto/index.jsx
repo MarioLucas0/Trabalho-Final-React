@@ -1,12 +1,28 @@
 
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import compra from "../../../assets/img/compra.svg";
+import { context } from "../../../context";
 import {
   DivContainer, DivImg, DivInfo,
   DivPreco, H2NomeProduto, IconCompra
 } from "./style";
 
 export const CardProduto = ({produto}) => {
+  const [quantidade,setQuantidade] = useState(0)
+  const ctx = useContext(context)
+  const {handleAddItemToCart} = useContext(context)
+ 
+
+
+  const jogarCarrinho = () => {
+
+    handleAddItemToCart(produto)
+
+  
+    
+  }
+
 
  
   return (
@@ -22,13 +38,14 @@ export const CardProduto = ({produto}) => {
         <H2NomeProduto>{produto?.nome}</H2NomeProduto>
         <DivPreco>
           <p>R$</p>
-          <span>{produto?.valorUnitario}</span>
+          <span>{produto?.valorUnitario.toFixed(2)}</span>
         </DivPreco>
     
     </DivInfo>
     <IconCompra>
-          <img src={compra} alt="" />
-        </IconCompra>
+          <img src={compra} alt="" onClick={jogarCarrinho}/>
+       
+    </IconCompra>
         
    </DivContainer>
   )

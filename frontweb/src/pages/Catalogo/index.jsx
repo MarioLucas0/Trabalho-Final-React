@@ -1,6 +1,6 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router";
 import Pesquisa from "../../assets/img/Pesquisa.svg";
-import { context } from "../../context";
 import api from '../../services/api';
 import CardLoader from "./CardLoader";
 import { CardProduto } from "./CardProduto";
@@ -10,23 +10,23 @@ import {
 } from "./style";
 export const Catalogo = () => {
 
-  const [produtos, setProdutos] = useState();
+  const [produtos, setProdutos] = useState([]);
   const [busca, setBusca] = useState("");
   const [isLoading, setIsLoading] = useState(false)
-  const ctx = useContext(context)
+  const { id } = useParams();
 
 
+
+
+  
   useEffect(() => {
 
     setIsLoading(true)
     api.get("/produtos")
       .then((response) => {
+        
       setProdutos(response.data.content)
-      ctx.setProduto(response.data.content)
-
-      console.log(response)
-      
-    
+      console.log(response.data.content)
     }).catch((err) => {
         console.error("ops! ocorreu um erro" + err);
       }).finally(() => {
@@ -35,13 +35,15 @@ export const Catalogo = () => {
       
   }, []);
 
+
+
   const limpar = () => {
     if(busca != "") {
       setBusca("")
     }
   }
 
-  const produtosFiltrados = produtos?.filter((produto) => produto.nome.includes(busca))
+  const produtosFiltrados = produtos?.filter((produto) => produto.nome.toUpperCase().includes(busca.toUpperCase()))
 
 
   return (

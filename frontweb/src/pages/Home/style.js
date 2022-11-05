@@ -4,21 +4,22 @@ import styled from 'styled-components'
 export const Section = styled.section`
 
   width: 100%;
-  height: 80%;
   display: flex;
   justify-content: center;
+ 
 
 `
 
 
 export const DivContainer = styled.div`
 
-  width: 119rem;
+  width: 99%;
   height: 48rem;
-  margin-top: 11.7rem;
+  margin-top: 8.7rem;
   margin-bottom: 18rem;
   margin-inline: 8rem;
   display: flex;
+  justify-content: space-around;
 
 `
 
@@ -91,11 +92,14 @@ export const DivButton = styled.div`
 
 export const Main = styled.main`
 
-  width: 136rem;
+  width: 80%;
+  height: 69rem;
   background: #FFFFFF;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
-  margin-top: 5.6rem;
+  margin-top: 4.6rem;
+  margin-bottom: 7.6rem;
+  overflow: hidden;
 
 `
 

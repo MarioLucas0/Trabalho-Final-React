@@ -5,6 +5,7 @@ import styled from 'styled-components'
 export const Section = styled.section`
   
   width: 100%;
+  height: 100%;
   display: flex;
 `
 
@@ -76,6 +77,8 @@ export const DivCardCrud = styled.div`
  display: flex;
  flex-direction: column;
  gap: 3rem;
+ margin-bottom: 20rem;
+ 
 `
 
 

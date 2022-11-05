@@ -7,7 +7,9 @@ export const Aside = styled.aside`
   flex-basis: 250px;
   background:  #FFFFFF;
   width: 30rem;
-  height: 100vh;
+  min-height: 97.1rem;
+
+  
 
  
   li {
@@ -31,6 +33,7 @@ export const Aside = styled.aside`
 
 export const Nav = styled.main`
   flex: 1;
+ 
 
 `
 

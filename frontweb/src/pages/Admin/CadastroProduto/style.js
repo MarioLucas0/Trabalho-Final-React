@@ -5,7 +5,7 @@ import styled from 'styled-components'
 export const DivContainer = styled.div`
 
   width: 106rem;
-  height: 78rem;
+  height: 74rem;
   background: #FFFFFF;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
@@ -65,7 +65,7 @@ export const ButtonImg = styled.button`
 
   width: 21rem;
   height: 3.8rem;
-  background: #9E9E9E;
+  background: #407BFF;
   border-radius: 10px;
   border: none;
   margin-top: 3.8rem;

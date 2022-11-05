@@ -6,8 +6,8 @@ export const Header =  styled.header`
   height: 70px;
   display: flex;
   align-items: center;
+  justify-content: space-around;
   background: #407BFF;
-
   box-shadow: 0px 20px 20px white;
   z-index: 1;
 
@@ -24,14 +24,30 @@ export const Header =  styled.header`
   }
 
 `
- 
+
 export const Nav = styled.nav`
 
   width: 38.3rem;
   height: 2.6rem;
- 
 
 `
+export const DivRight = styled.nav`
+
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+
+  p{
+    color: #FFFFFF;
+    font-weight: 700;
+  }
+ 
+ img {
+  width: 3rem;
+ }
+
+`
+
 
 export const Ul = styled.ul`
 

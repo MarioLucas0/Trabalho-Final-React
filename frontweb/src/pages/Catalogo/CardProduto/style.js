@@ -8,15 +8,31 @@ export const DivContainer = styled.div`
   background: #FFFFFF;
   border-radius: 10px;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  &:last-child { 
+   margin-bottom: 15rem;
+  }
 
 `
 export const IconCompra= styled.div`
 
   cursor: pointer;
-  width: 5rem;
   display: flex;
-  margin-left: 3rem;
+  align-items: center;
+  width: 100%;
+ 
 
+  img {
+    width: 5rem;
+    margin-left: 5rem;
+    margin-right: 2rem;
+  }
+
+  input[type="text"] {
+    width: 7rem;
+    height: 3rem;
+    font-weight: 700;
+    font-size: 2rem;
+  }
 
  
 `
@@ -46,7 +62,9 @@ export const DivInfo = styled.div`
   width: 100%;
   padding: 1.4rem 1.9rem 0 2.1rem;
   height: 100%;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
 `
 
@@ -66,6 +84,7 @@ export const DivPreco = styled.div`
   display: flex;
   height: 3.5rem;
   align-items: center;
+  
 
   p {
 

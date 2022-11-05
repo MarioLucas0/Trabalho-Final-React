@@ -3,15 +3,23 @@ import styled from 'styled-components'
 export const Section = styled.section`
   
   width: 100%;
+
   display: flex;
 `
 
-export const Main = styled.main`
-  width: 100%;
+export const Main = styled.div`
+
+  width: 80%;
   padding: 1.5rem 0 0 1.5rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1rem;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  margin: 5.8rem auto;
+  height: 79rem;
+
   
 `
 
@@ -106,7 +114,7 @@ export const DivInfoContainer = styled.div`
   border: 1px solid #E1E1E1;
   width: 35rem;
   height: 10rem;
-  background: #FFFFFF;
+  background: #EDEDED;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
   margin-top: 5.6rem;
@@ -131,6 +139,25 @@ export const DivEditar = styled.div`
 
 
 `
+export const ButtonAdicionarCategoria = styled.button`
+  width: 17rem;
+  height: 6rem;
+  background: #407BFF;
+  border-radius: 10px;
+  margin-right: 2.6rem;
+  border: none;
+  cursor: pointer;
+  color: rgba(255,255,255,0.5);
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 1.5rem 1.5rem  0 1.5rem  ;
+  `
+export const DivButton = styled.div`
+ display: flex;
+ justify-content: center;
+`
+
+
 
 
 

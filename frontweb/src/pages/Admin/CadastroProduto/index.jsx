@@ -47,7 +47,7 @@ export const CadastroProduto = () => {
                   <input type="text" value={imagem} placeholder="Link da imagem" onChange={(e) => setImagemUrl(e.target.value)}/>
                 </DivInputs>
             
-                <ButtonImg type="submit"  onClick={insertProduct}>Enviar</ButtonImg>
+                <ButtonImg type="submit"  onClick={insertProduct}>Adicionar</ButtonImg>
                 <TextImg>As imagens devem ser  JPG ou PNG e não devem ultrapassar 5 mb</TextImg>
             </DivLeft>
 

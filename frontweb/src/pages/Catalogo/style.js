@@ -66,12 +66,14 @@ export const DivCards = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 3.5rem;
+ 
 `
 
 export const Section = styled.section`
 
   width: 100%;
-  height: 100vh;
+  min-height: 110rem;
+
 
 `
 

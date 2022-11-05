@@ -1,8 +1,8 @@
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Content } from './components/Content/index';
+import { Footer } from './components/Footer';
 import { NavBar } from './components/NavBar';
 import { ContextProvider } from './context/index';
-import GlobalStyle from './style/global';
 
 export const App = () => {
   
@@ -11,9 +11,9 @@ export const App = () => {
     <div className="App">
       <ContextProvider>
         <Router>
-          <GlobalStyle />
           <NavBar />
-          <Content />
+           <Content />
+          <Footer />
         </Router>
       </ContextProvider>
     </div>
