@@ -1,5 +1,14 @@
 import styled from 'styled-components'
 
+export const Section = styled.section`
+  
+  width: 100%;
+  height: 100%;
+  min-height: 120rem;
+  display: flex;
+  
+ 
+`
 
 export const H1Inicial = styled.h1`
   font-weight: 700;
@@ -62,28 +71,24 @@ export const DivInput = styled.div`
 
 
 `
-export const DivCards = styled.div`
+
+
+export const DivContainer = styled.div`
+
+  width: 119rem;
+  height: 100%;
+  display: flex;
+  margin-inline: 18rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 26rem;
+  
+
+`
+export const DivCards = styled.main`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 3.5rem;
  
 `
 
-export const Section = styled.section`
-
-  width: 100%;
-  min-height: 110rem;
-
-
-`
-
-export const DivContainer = styled.div`
-
-  width: 119rem;
-  height: 48rem;
-  display: flex;
-  margin-inline: 18rem;
-  display: flex;
-  flex-direction: column;
-
-`

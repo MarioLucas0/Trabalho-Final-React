@@ -77,8 +77,10 @@ export const DivCardCrud = styled.div`
  display: flex;
  flex-direction: column;
  gap: 3rem;
- margin-bottom: 20rem;
+ margin-bottom: 37rem;
  
 `
+
+
 
 

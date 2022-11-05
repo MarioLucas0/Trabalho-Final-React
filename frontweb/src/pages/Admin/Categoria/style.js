@@ -19,6 +19,7 @@ export const Main = styled.div`
   border-radius: 20px;
   margin: 5.8rem auto;
   height: 79rem;
+  margin-bottom: 37rem;
 
   
 `

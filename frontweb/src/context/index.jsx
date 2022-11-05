@@ -5,6 +5,7 @@ export const context = createContext({});
 export const  ContextProvider = ({ children }) => {
   const [productsCart, setProductsCart] = useState([]);
   const [quantidadeItems,setQuantidadeItems] = useState(0);
+  
 
   function handleAddItemToCart(produto) {
     const itemObject = [...productsCart];
@@ -21,12 +22,13 @@ export const  ContextProvider = ({ children }) => {
     
       });
     } else {
-      if(item.quantidade != 1) {
-       item.quantidade = item.quantidade + 1;
-      }
+      item.quantidade = item.quantidade + 1;
     }
 
     setProductsCart(itemObject);
+
+   
+      console.log(itemObject)
   }
 
   function handleRemoveItemToCart(id) {

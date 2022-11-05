@@ -26,7 +26,6 @@ export const Catalogo = () => {
       .then((response) => {
         
       setProdutos(response.data.content)
-      console.log(response.data.content)
     }).catch((err) => {
         console.error("ops! ocorreu um erro" + err);
       }).finally(() => {
@@ -64,7 +63,6 @@ export const Catalogo = () => {
               <CardProduto produto={prod} key={index}/>
             )))}
           </DivCards>
-          
        
         </DivContainer>
       </Section>

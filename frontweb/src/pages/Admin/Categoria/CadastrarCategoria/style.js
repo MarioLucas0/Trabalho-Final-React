@@ -17,7 +17,9 @@ display: flex;
 export const Section = styled.section`
 
 width: 100%;
+min-height: 119rem;
 display: flex;
+overflow: hidden;
 
 `
 
@@ -27,6 +29,7 @@ width: 100%;
 padding: 1.5rem 0 0 1.5rem;
 display: flex;
 justify-content: center;
+margin-bottom: 37rem;
 `
 
 

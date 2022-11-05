@@ -2,8 +2,9 @@ import styled from "styled-components"
 
 export const Geral =styled.footer`
   width: 100%;
-  position: relative;
+  position: absolute;
   bottom: 0;
+  left: 0;
     
 `
 export const Pe = styled.div`
@@ -16,8 +17,8 @@ export const Container = styled.div`
     padding-block: 3rem;
 `
 export const Row = styled.div`
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
 `
 export const Col = styled.div`
     width: 25%;
