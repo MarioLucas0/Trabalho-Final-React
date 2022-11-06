@@ -32,9 +32,10 @@ export const CarrinhoCompras = () => {
       "dataEntrega": "17/07/2000",
       "dataEnvio": "17/07/2000",
       "client": {
-        "id": 3
+        "id": 1
       },
-      "items": novoArray
+      "items": novoArray,
+      "valorTotal": totalPrice.toFixed(2),
     }).then((response) => {
       console.log(response)
 

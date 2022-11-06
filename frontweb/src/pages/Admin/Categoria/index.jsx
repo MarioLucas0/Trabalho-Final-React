@@ -29,16 +29,16 @@ export const CategoriaInfo = () => {
   return (
     <Section >
     <MenuAdmin />
-      <DivContainer>
         <DivButton>
           <Link to={"/admin/categoria/cadastrar"}>
             <ButtonAdicionarCategoria>Adicionar</ButtonAdicionarCategoria>
            </Link>
         </DivButton>
         <Main>
+        <DivContainer > 
           {categoria?.map((prod,index) => (
-            <DivContainer key={index}> 
-              <DivInfoContainer >
+            
+              <DivInfoContainer key={index} >
                 <DivInfo>
           
                     <DivId>
@@ -66,13 +66,11 @@ export const CategoriaInfo = () => {
                 </Link>
               </DivCrud>     
               </DivInfoContainer>
-            </DivContainer> 
+         
           
-          ))}
-     
-          
+          ))}  
+          </DivContainer> 
         </Main>
-      </DivContainer>
     </Section>
     )
 }

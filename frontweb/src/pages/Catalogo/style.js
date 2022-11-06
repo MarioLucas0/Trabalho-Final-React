@@ -81,7 +81,9 @@ export const DivContainer = styled.div`
   margin-inline: 18rem;
   display: flex;
   flex-direction: column;
-  margin-bottom: 26rem;
+  margin-bottom: 30rem;
+
+  
   
 
 `

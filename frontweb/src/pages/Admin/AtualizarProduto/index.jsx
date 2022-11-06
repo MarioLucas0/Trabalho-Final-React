@@ -11,6 +11,7 @@ export const AtualizarProduto = () => {
   const [quantide,setQuantide] = useState("")
   const [valorUnitario,setValorUnitario] = useState("")
   const [categoriaid,setCategoriaid] = useState(0)
+  const [imagemUrl,setImagemUrl] = useState("")
 
 
 /*   const schema = yup.object({
@@ -42,6 +43,7 @@ export const AtualizarProduto = () => {
         "qtdEstoque": `${quantide}` ,
         "dataCadastro": "2022-10-24T23:13:36.856Z",
         "valorUnitario": `${valorUnitario}`,
+        "imagemUrl" : imagemUrl,
         "categoria": {
           "id": categoriaid
         }
@@ -64,6 +66,7 @@ export const AtualizarProduto = () => {
                   <input type="text" value={nome} placeholder="Digite o Nome do Produto" onChange={(e) => setNome(e.target.value)} />
                   <input type="text" value={quantide} placeholder="Quantidade em Estoque" onChange={(e) => setQuantide(e.target.value)} />
                   <input type="text" value={valorUnitario} placeholder="Valor Unitario" onChange={(e) => setValorUnitario(e.target.value)}/>
+                  <input type="text" value={imagemUrl} placeholder="Link da Imagem" onChange={(e) => setImagemUrl(e.target.value)}/>
                 </DivInputs>
                 <ButtonEnviar onClick={editarProduto}>Enviar</ButtonEnviar>
             </DivLeft>

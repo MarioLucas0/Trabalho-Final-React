@@ -8,9 +8,7 @@ export const DivContainer = styled.div`
   background: #FFFFFF;
   border-radius: 10px;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
-  &:last-child { 
-   margin-bottom: 15rem;
-  }
+  height: 36.6rem;
 
 `
 export const IconCompra= styled.div`
@@ -42,6 +40,7 @@ export const IconCompra= styled.div`
 export const DivImg = styled.div`
 
   width: 100%;
+  height: 15.8rem;
   padding:1.8rem  4.9rem  0.7rem 3.9rem;
   border: 1px solid #E1E1E1;
   display: flex;
@@ -50,7 +49,6 @@ export const DivImg = styled.div`
 
   img {
     max-width: 15.8rem;
-    height: 15.8rem;
     border-radius: 10px;
   }
 

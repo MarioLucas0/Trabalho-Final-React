@@ -8,32 +8,33 @@ export const Section = styled.section`
 `
 
 export const Main = styled.div`
-
-  width: 80%;
-  padding: 1.5rem 0 0 1.5rem;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  padding: 1.5rem ;
+  
   grid-gap: 1rem;
   background: #FFFFFF;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
   margin: 5.8rem auto;
-  height: 79rem;
-  margin-bottom: 37rem;
+  margin-bottom: 31rem;
+  overflow: hidden;
 
   
 `
 
 export const DivContainer = styled.div`
 
-display: flex;
-justify-content: center;
+    grid-gap: 4rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,10rem);
 
 `
 export const DivInfo = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  
   
 `
 
@@ -122,6 +123,8 @@ export const DivInfoContainer = styled.div`
   padding-left: 1.7rem;
   display: flex;
   justify-content: space-between;
+
+  
 
 
 
