@@ -143,6 +143,39 @@ export const DivButtons = styled.div`
 
 
 `
+export const DivIconFechar = styled.div`
+
+  img {
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+  }
+`
+
+export const DivInfos = styled.div`
+
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  button {
+ 
+    height: 2.2rem;
+    width: 2.2rem;
+    border-radius: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    background-color: #407BFF;
+    color: white;
+    margin-left: 1rem;
+  }
+
+`
+
+
+
+
+
 
 
 

@@ -29,9 +29,6 @@ export const Home = () => (
               </div>
             </DivButton>  
           </Link>
-         
-
-
         </DivText>
         <DivImg>
           <img src={Desenho} alt="" />

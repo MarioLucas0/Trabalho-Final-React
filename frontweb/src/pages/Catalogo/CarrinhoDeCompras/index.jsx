@@ -1,15 +1,21 @@
 import { useContext } from "react";
+import iconFechar from "../../../assets/img/fechar.png";
 import { context } from "../../../context";
 import api from "../../../services/api";
-import { ButtonFazerPedido, ButtonLimpar, DivButtons, DivContainer, DivContainerCard, DivImg, DivInfo, Main, Section, TextoPrincipal } from "./style";
+import { ButtonFazerPedido, ButtonLimpar, DivButtons, DivContainer, DivContainerCard, DivIconFechar, DivImg, DivInfo, DivInfos, Main, Section, TextoPrincipal } from "./style";
 export const CarrinhoCompras = () => {
   
 
   const {
     productsCart,
     clearCart,
-    handleRemoveItemToCart
+    removalItem,
+    removerItem,
+    aumentarItem
   } = useContext(context);
+
+
+
 
 
   let totalPrice = 0 
@@ -46,27 +52,7 @@ export const CarrinhoCompras = () => {
     });   
  }
 
-   async function requestPost() {}
-  
-  
 
-/*     //let params;
-    productsCart.map((prod) => {
-      // const item = [...productsCart]
-      
-          
-        params = {
-            "id": 0,
-            "dataEntrega": "17/07/2000",
-            "dataEnvio": "17/07/2000",
-            "client": {
-              "id": 3
-            },
-            "items": novoArray
-          } 
-  
-      })
- */
 
   return (
     <Section>
@@ -86,18 +72,23 @@ export const CarrinhoCompras = () => {
               <DivImg>   
                 <img src={product.imagemUrl}  />
               </DivImg>
-              <DivInfo>
-                <span>NOME PRODUTO</span>
-                <h1>{product?.nome}</h1>
-                <span>VALOR DO PRODUTO</span>
-                <p>R$ {product?.valorUnitario.toFixed(2)}</p>
-                <span>QUANTIDADE: {product?.quantidade}</span>
-                <p></p>
-                <span>SUB TOTAL</span>
-                <p>R$ {subTotal.toFixed(2)}</p>
-                
-              </DivInfo> 
-            </DivContainerCard>          
+              <DivInfos>
+                <DivInfo>
+                  <span>NOME PRODUTO</span>
+                  <h1>{product?.nome}</h1>
+                  <span>VALOR DO PRODUTO</span>
+                  <p>R$ {product?.valorUnitario.toFixed(2)}</p>
+                  <span>SUB TOTAL</span>
+                  <p>R$ {subTotal.toFixed(2)}</p>
+                  <span>QUANTIDADE: {product?.quantidade}</span>
+                  <button onClick={() => aumentarItem(product)}>+</button>
+                  <button onClick={() => removerItem(product.id)}>-</button>
+                </DivInfo> 
+                <DivIconFechar><img src={iconFechar} onClick={() => removalItem(product?.id)}/></DivIconFechar>  
+              </DivInfos>
+            </DivContainerCard>   
+         
+               
           )})}
         </DivContainer>
        <DivButtons>
