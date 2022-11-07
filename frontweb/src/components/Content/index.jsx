@@ -9,11 +9,7 @@ import { AtualizarCategoria } from '../../pages/Admin/Categoria/CategoriaAtualiz
 import { ListarPedidos } from '../../pages/Admin/ListarPedidos';
 import { ListarPedidosId } from '../../pages/Admin/ListarPedidos/ListarPedidosId';
 import { CarrinhoCompras } from '../../pages/Catalogo/CarrinhoDeCompras';
-<<<<<<< HEAD
-import {Login} from "../../pages/Login/index"
 
-=======
->>>>>>> origin/mario
 import { Catalogo } from '../../pages/Catalogo/index';
 import { Home } from '../../pages/Home';
 import NotFound from '../../pages/NotFound';
@@ -41,12 +37,11 @@ export const Content = () => (
       <Route path="/admin/pedido/listar/id" element={<ListarPedidosId/ >} />
       <Route path="/admin/categoria" element={ <CategoriaInfo />} />
       <Route path="/catalogo/:id" element={ <ProdutoInfo /> } />
-<<<<<<< HEAD
-      <Route path="/" element={<Login/>}/>
-=======
+
+
       {/* Bernado */}
       <Route path="/login" element={ <Login />}/>
->>>>>>> origin/mario
+
    
       <Route path="*" element={<NotFound />}/>
 
