@@ -4,6 +4,7 @@ export const Section = styled.section`
   
   width: 100%;
   display: flex;
+  overflow: hidden;
 
   @media(max-width: 1300px) {
     flex-direction: column;
@@ -99,6 +100,13 @@ export const Main = styled.div`
 
   @media(max-width: 1300px){
     width: 80%;
+    margin-inline: 11rem;
+  }
+  @media(max-width: 900px){
+    margin-inline: 8rem;
+  }
+  @media(max-width: 450px){
+    margin-inline: 3rem;
   }
 
   
@@ -110,6 +118,17 @@ export const DivContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(2,10rem);
+
+    @media(max-width: 900px) {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      gap: 3rem;
+      margin-inline: 8rem;
+
+      
+    }
 
 `
 export const DivInfo = styled.div`
@@ -192,6 +211,7 @@ export const DivCrud = styled.div`
  justify-content: space-around;
 
 `
+
 export const DivInfoContainer = styled.div`
 
 
@@ -205,6 +225,17 @@ export const DivInfoContainer = styled.div`
   padding-left: 1.7rem;
   display: flex;
   justify-content: space-between;
+
+
+  @media(max-width: 900px) {
+    margin-top: 0;
+  }
+
+  @media(max-width: 450px) {
+    width: 27rem;
+  }
+
+ 
 
   
 

@@ -23,7 +23,9 @@ export const AtualizarCategoria = () => {
   return (
 
     <Section>
-       <MenuAdmin />
+        <div className="menu">
+          <MenuAdmin />
+        </div>
       <Main>
           <DivContainer>
             <DivLeft>
