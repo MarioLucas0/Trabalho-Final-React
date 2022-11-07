@@ -18,7 +18,9 @@ export const ListarPedidos = () => {
   
     return (
       <Section>
-        <MenuAdmin />
+        <div className="menu">
+          <MenuAdmin />
+        </div>
         <Main>
           <DivContainer>
             <DivInfos> 

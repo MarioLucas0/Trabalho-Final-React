@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 export const DivContainer = styled.div`
 
-  width: 106rem;
+  width: 90%;
   height: 50rem;
   background: #FFFFFF;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
@@ -12,6 +12,15 @@ export const DivContainer = styled.div`
   margin-top: 5.6rem;
   padding-left: 4.7rem;
   display: flex;
+  margin-bottom: 35rem;
+  overflow: hidden;
+
+  @media(max-width: 1200px) {
+    margin-bottom: 31rem;
+    flex-direction: column;;
+    height: 80rem;
+    padding-bottom: 4rem;
+  }
   
 
 
@@ -111,9 +120,17 @@ export const Main = styled.main`
   padding: 1.5rem 0 0 1.5rem;
   display: flex;
   justify-content: center;
+
   @media(max-width: 900px) {
     width: 80%;
     margin-bottom: 18rem;
+    margin-inline: 9rem;
+  }
+
+  @media(max-width: 650px) {
+    width: 100%;
+    margin: 0;
+    
   }
 
  
@@ -147,6 +164,12 @@ export const DivInputs = styled.div`
     padding-left: 1rem;
     
   }
+  @media(max-width: 900px) {
+    input[type="text"]{
+    width: 87%;
+    }
+  }
+ 
 `
 
 export const ButtonEnviar = styled.button`
@@ -195,6 +218,15 @@ export const  DivDescricao = styled.div`
     resize: none;
    
     
+  }
+  @media(max-width: 1200px) {
+    width: 80%;
+    margin-top: 3rem;
+
+    textarea {
+      width: 50%
+    }
+
   }
 
 `
