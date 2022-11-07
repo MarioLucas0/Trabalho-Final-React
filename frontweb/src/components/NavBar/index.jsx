@@ -11,7 +11,7 @@ export const NavBar = () => {
   const {logado, setLogado} = useState(context)
     
   return (
-    <Header className="menu">
+    <Header>
         <span>SerraCommerce</span>
       <Nav>
         <Ul>

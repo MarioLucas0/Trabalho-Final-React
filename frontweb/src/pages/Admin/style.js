@@ -7,6 +7,85 @@ export const Section = styled.section`
   width: 100%;
   height: 100%;
   display: flex;
+
+  @media(max-width: 1200px) {
+    flex-direction: column;
+    .menu {
+    width: 100%;
+    height: 12rem;
+   
+    aside {
+      width: 100%;
+      height: 12rem;
+      min-height: 0;
+      main{
+        height: 100%;
+        ul{
+          height: 100%;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          li{
+            width: 27rem;
+             height: 5rem;
+             background: #F2F2F2;
+             border-radius: 100px;
+             &:hover {
+              background: rgba(64, 123, 255, 0.3);
+              color: #407BFF;
+            }
+           
+             a{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              padding: 0;
+              margin: 0;
+              &:hover {
+                color: #407BFF;
+            }
+             
+             }
+          }
+        }
+      }
+    }
+  }
+  }
+  @media(max-width: 990px) {
+    flex-direction: column;
+    .menu {
+      aside {
+        main{
+          ul{
+            li{
+              width:20rem;
+              height: 4.5rem; 
+          }
+        }
+      }
+    }
+  }
+  }
+  @media(max-width: 660px) {
+    flex-direction: column;
+    .menu {
+      aside {
+        main{
+          ul{
+            li{
+              width: 11rem;
+              height: 4.5rem;
+              
+          }
+        }
+      }
+    }
+  }
+  }
+  li {
+
+  }
 `
 
 export const Main = styled.main`
@@ -22,12 +101,26 @@ export const Button = styled.button`
   margin-right: 2.6rem;
   border: none;
   cursor: pointer;
+  
+  @media(max-width: 1100px){
+    width: 11rem;
+    height: 6rem;
+    margin-bottom: 2rem;
+  }
+  
 `
 
 export const DivInputs = styled.div`
 
   width: 100%;
   display: flex;
+  @media(max-width: 1100px){
+
+    flex-direction: column;
+}
+
+
+
 
   
 
@@ -43,8 +136,6 @@ export const DivInput = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 3rem;
-
-
   
 
   input[type="text"] {
@@ -70,6 +161,29 @@ export const DivInput = styled.div`
   cursor: pointer;
  }
 
+ @media(max-width: 1100px){
+
+  width: 78%;
+  button {
+    
+    margin-right:1rem;
+   }
+
+ }
+  @media(max-width: 550px){
+    width: 66%;
+  button {
+    display: none;
+  }
+  img {
+    display: none;
+  }
+
+  }
+
+
+
+
 
 `
 export const DivCardCrud = styled.div`
@@ -77,8 +191,33 @@ export const DivCardCrud = styled.div`
  display: flex;
  flex-direction: column;
  gap: 3rem;
- margin-bottom: 20rem;
+ margin-bottom: 37rem;
+
+ @media(max-width: 2800px) {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+ }
+ @media(max-width: 1850px) {
+ display: flex;
+ margin-left: 6rem;
+}
+
+@media(max-width: 850px) {
+ display: flex;
+  margin-left: 0;
+  align-items: center;
+}
+@media(max-width: 600px) {
+  margin-left: 5rem;
+}
+@media(max-width: 450px) {
+  margin-left: 0;
+}
+
+
  
 `
+
+
 
 

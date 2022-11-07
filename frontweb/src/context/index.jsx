@@ -4,7 +4,7 @@ export const context = createContext({});
 
 export const  ContextProvider = ({ children }) => {
   const [productsCart, setProductsCart] = useState([]);
-  const [quantidadeItems,setQuantidadeItems] = useState(0);
+  
 
   function handleAddItemToCart(produto) {
     const itemObject = [...productsCart];
@@ -20,16 +20,23 @@ export const  ContextProvider = ({ children }) => {
         quantidade: 1,
     
       });
-    } else {
-      if(item.quantidade != 1) {
-       item.quantidade = item.quantidade + 1;
-      }
-    }
-
+    } 
     setProductsCart(itemObject);
   }
 
-  function handleRemoveItemToCart(id) {
+  function aumentarItem(produto){
+    const itemObject = [...productsCart];
+    const item = itemObject.find((product) => product.id === produto.id);
+
+    if (item) {
+      item.quantidade = item.quantidade + 1;
+      setProductsCart(itemObject);
+      console.log("ok")
+  }
+
+}
+
+  function removerItem(id) {
     const itemObject = [...productsCart];
     const item = itemObject.find((product) => product.id === id);
 
@@ -40,15 +47,17 @@ export const  ContextProvider = ({ children }) => {
       const arrayFiltered = itemObject.filter((product) => product.id !== id);
       setProductsCart(arrayFiltered);
     }
+
   }
 
   function removalItem(id) {
     const itemObject = [...productsCart];
+    const arrayFiltrado = itemObject.filter((product) => product.id !== id);
 
-    const arrayFiltered = itemObject.filter((product) => product.id !== id);
-    setProductsCart(arrayFiltered);
+    setProductsCart(arrayFiltrado);
   }
 
+  
   function clearCart() {
     setProductsCart([]);
   }
@@ -58,11 +67,11 @@ export const  ContextProvider = ({ children }) => {
       value={{
         productsCart,
         handleAddItemToCart,
-        handleRemoveItemToCart,
+        removerItem,
         removalItem,
         clearCart,
-        quantidadeItems,
-        setQuantidadeItems
+        aumentarItem
+       
       }}
     >
       {children}

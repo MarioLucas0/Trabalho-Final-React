@@ -10,15 +10,13 @@ export const App = () => {
 
   return (
     <div className="App">
-      <AuthProvider>
         <ContextProvider>
           <Router>
             <NavBar />
-            <Content />
+             <Content />
             <Footer />
           </Router>
         </ContextProvider>
-      </AuthProvider>
     </div>
   )
 }

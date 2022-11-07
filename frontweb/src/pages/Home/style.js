@@ -21,6 +21,16 @@ export const DivContainer = styled.div`
   display: flex;
   justify-content: space-around;
 
+  @media (max-width: 1300px) {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+      
+  }
+
 `
 
 export const DivText = styled.div`
@@ -29,6 +39,16 @@ export const DivText = styled.div`
   flex-direction: column;
   width: 56rem;
   height: 100%;
+  @media (max-width: 1300px) {
+    margin-bottom: 10rem;
+  
+    
+  }
+
+  @media (max-width: 770px) {
+  align-items: center;
+      text-align: center;
+  }
 
 `
 
@@ -43,6 +63,20 @@ export const TextoPrincipal = styled.h2`
       letter-spacing: -0.015em;
       color: #263238;
 
+  @media (max-width: 770px) {   
+      font-size:  4.5rem;
+  }
+  @media (max-width: 620px) {  
+    font-size: 3.5rem;
+    width: 70%;
+    line-height: 5rem;
+  }
+  @media (max-width: 480px) {  
+    font-size: 2.5rem;
+    width: 50%;
+    line-height: 5rem;
+  }
+
 `
 
 export const TextoSecundario = styled.p`
@@ -53,6 +87,18 @@ export const TextoSecundario = styled.p`
     color: #9E9E9E;
     margin-top: 2.6rem;
     margin-bottom: 15rem;
+
+  @media (max-width: 770px) {
+    width: 80%;
+  }
+
+  @media (max-width: 620px) {  
+    width: 70%;
+  }
+  @media (max-width: 480px) {  
+    width: 50%;
+    font-size: 1.6rem;
+  }
 
 `
 
@@ -88,17 +134,30 @@ export const DivButton = styled.div`
 
   }
 
+  @media (max-width: 620px) {
+    width: 100%;
+    p{
+      font-size: 1.4rem;
+    }
+  }
+  @media (max-width: 480px) {  
+    width: 100%;
+    font-size: 1.4rem;
+  }
+
+
 `
+
 
 export const Main = styled.main`
 
   width: 80%;
-  height: 69rem;
+ height: 100%;
   background: #FFFFFF;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
-  margin-top: 4.6rem;
-  margin-bottom: 7.6rem;
+  margin-top: 10rem;
+  margin-bottom: 38rem;
   overflow: hidden;
 
 `

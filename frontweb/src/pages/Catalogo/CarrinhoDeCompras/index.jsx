@@ -1,39 +1,101 @@
 import { useContext } from "react";
+import iconFechar from "../../../assets/img/fechar.png";
 import { context } from "../../../context";
-import { ButtonLimpar, DivContainer, DivContainerCard, DivImg, DivInfo, Main, Section } from "./style";
+import api from "../../../services/api";
+import { ButtonFazerPedido, ButtonLimpar, DivButtons, DivContainer, DivContainerCard, DivIconFechar, DivImg, DivInfo, DivInfos, Main, Section, TextoPrincipal } from "./style";
 export const CarrinhoCompras = () => {
+  
+
   const {
     productsCart,
     clearCart,
-    handleRemoveItemToCart,
+    removalItem,
+    removerItem,
+    aumentarItem
   } = useContext(context);
 
-/*   useEffect(() => {
-  console.log(productsCart[0].descricao)
-  },[])  */
-  
+
+
+
+
+  let totalPrice = 0 
+
+  const comprar = async () =>{
+
+    const novoArray = []
+
+    for(let i = 0; i < productsCart.length; i++) {
+      novoArray.push({
+        produtoId: productsCart[i].id,
+        quantidade: productsCart[i].quantidade
+      })
+    }
+
+    console.log(novoArray)
+    
+    api.post("/pedido",{
+      "id": 0,
+      "dataEntrega": "17/07/2000",
+      "dataEnvio": "17/07/2000",
+      "client": {
+        "id": 1
+      },
+      "items": novoArray,
+      "valorTotal": totalPrice.toFixed(2),
+    }).then((response) => {
+      console.log(response)
+
+    }).catch((err) => {
+      console.error("ops! ocorreu um erro" + err);
+    }).finally(() => {
+    
+    });   
+ }
+
+
+
   return (
     <Section>
+        <TextoPrincipal>CARRINHO DE COMPRAS</TextoPrincipal>
       <Main>
+          
         <DivContainer>
-          {productsCart?.map((product,index) => (
+          {productsCart?.map((product,index) => {
+            
+            const subTotal = product.valorUnitario * product.quantidade
+            totalPrice += subTotal
+
+            
+            return (
+          
             <DivContainerCard key={index}>
-              <DivImg>
-                
+              <DivImg>   
                 <img src={product.imagemUrl}  />
               </DivImg>
-              <DivInfo>
-                <span>NOME PRODUTO</span>
-                <h1>{product?.nome}</h1>
-                <span>VALOR DO PRODUTO</span>
-                <p>R$ {product?.valorUnitario.toFixed(2)}</p>
-                <span>QUANTIDADE: {product?.quantidade}</span>
-              </DivInfo> 
-            </DivContainerCard>
-            
-          ))}
+              <DivInfos>
+                <DivInfo>
+                  <span>NOME PRODUTO</span>
+                  <h1>{product?.nome}</h1>
+                  <span>VALOR DO PRODUTO</span>
+                  <p>R$ {product?.valorUnitario.toFixed(2)}</p>
+                  <span>SUB TOTAL</span>
+                  <p>R$ {subTotal.toFixed(2)}</p>
+                  <span>QUANTIDADE: {product?.quantidade}</span>
+                  <button onClick={() => aumentarItem(product)}>+</button>
+                  <button onClick={() => removerItem(product.id)}>-</button>
+                </DivInfo> 
+                <DivIconFechar><img src={iconFechar} onClick={() => removalItem(product?.id)}/></DivIconFechar>  
+              </DivInfos>
+            </DivContainerCard>   
+          )})}
         </DivContainer>
+       <DivButtons>
+        
+        <ButtonFazerPedido onClick={comprar}>Realizar Pedido</ButtonFazerPedido>
         <ButtonLimpar onClick={clearCart}>Limpar Carrinho</ButtonLimpar>
+        <p>Valor  Total:  R$ {totalPrice.toFixed(2)}</p>
+       
+       </DivButtons>
       </Main>
     </Section>
   )

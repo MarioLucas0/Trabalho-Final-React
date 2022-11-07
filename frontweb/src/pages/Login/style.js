@@ -1,108 +1,192 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
-export const Geral = styled.div`
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
+export const  Section = styled.section`
 
-    background-color: white;
-    
+  width: 100%;
+  height: 100%;
+  display: flex;
+  
 `
-export const Card = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70vh;
-    width: 20vw;
-    flex-direction: column;
-    padding: 5vw;
+export const  DivContainer = styled.div`
+  width: 100%;
+  display: flex;
 
-    background-color: white;
-    border-radius: 5px;
-    
-    box-shadow: 3px 1px 20px 1px  #191A19;
+  margin-block: 6rem;
+  margin-bottom: 34rem;
+
+
 `
-export const Titulo = styled.div`
-    display: flex;
-    align-items: center;
-    height: 10vh;
-    
-    padding: 0%;
-    font-style: normal;
+
+export const DivLeft = styled.div`
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+ align-items: flex-end;
+
+  h1 {
+    width: 64rem;
+    height: 15rem;
+    font-weight: 700;
+    font-size: 5.5rem;
+    line-height: 7.5rem;
+    letter-spacing: -0.015em;
+    color: #263238;
+
+  }
+
+  p {
+    width: 51rem;
+    height: 7.8rem;
     font-weight: 400;
-    line-height: 65px;
+    font-size: 2.4rem;
+    line-height: 3.3rem;
+    letter-spacing: -0.015em;
+    color: #9E9E9E;
+    margin-right: 13rem;
+  }
+
+
+`
+export const  DivImg = styled.div`
+  width: 53rem ;
+  height: 47.8rem;
+  overflow: hidden;
+
+
+  img {
+   width: 100%;
+  }
+
+
+`
+
+export const  DivRight = styled.div`
+  width: 50%;
+  height: 100%;
+  margin-left: 16rem;
+
+
+`
+export const  DivCard = styled.div`
+
+    width: 55rem;
+    height: 78rem;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding-inline: 5.1rem;
+    padding-top: 9.7rem;
+
+  h1 {
+
+    width: 31.7rem;
+    height: 6.7rem;
+    font-weight: 400;
+    font-size: 4.8rem;
+    line-height: 6.5rem;
     text-align: center;
     letter-spacing: -0.015em;
-    
-
     color: #263238;
-`
-export const Email = styled.div`
-    width: 170%;
-    height: 10vh;
-    
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
-    font-size: 20px;
-    color: white;
-`
-export const Senha = styled.div`
-    width: 170%;
-    height: 10vh;
+    padding-inline: 14.7rem;
+    margin-bottom: 8.4rem;
 
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
-    font-size: 20px;
-    color: white;
-`
-export const Recuperacao = styled.p`
+  }
 
-    /* font-family: 'Open Sans'; */
-    font-style: normal;
+  input
+   {
+    width: 44.9rem;
+    height: 5rem;
+    padding-left: 1rem;
+  }
+  p {
     font-weight: 400;
-    font-size: 10px;
-    line-height: 25px;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
     letter-spacing: -0.015em;
-    &:hover{
-        cursor: pointer;
-        text-decoration: underline;
-    }
+    color: #407BFF;
+    padding-inline: 5.1rem;
+    padding-bottom: 10.6rem;
+    
+  }
 
-color: #407BFF;
+  span {
+    width: 100rem;
+    height: 2.8rem;
+    margin-left: -5rem;
 
-mix-blend-mode: normal;
+ 
+  }
+
+  .textfinal {
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    text-align: center;
+    letter-spacing: -0.015em;
+    color: #9E9E9E;
+  }
+
+  a{
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    text-align: center;
+    letter-spacing: -0.015em;
+    text-decoration-line: underline;
+    color: #407BFF;
+    margin-left: 1rem;
+  }
+
+
+
+
 `
-export const Button = styled.button`
+export const DivInput = styled.div`
+
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+
+
+`
+
+
+export const DivButton = styled.div`
+
+  display: flex;
+  background: #407BFF;
+  align-items: center;
+  justify-content: space-between;
+  width: 45rem;
+  height: 6rem;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 2rem;
+
+
+
+  p{
+    width: 80%;
+    font-weight: 700;
+    padding: 0;
+    font-size: 2.4rem;
+    line-height: 3.3rem;
+    letter-spacing: -0.015em;
+    color: #FFFFFF;
+    padding-left: 3rem; 
     display: flex;
     justify-content: center;
+  }
+
+  div {
+    display: flex;
     align-items: center;
-    height: 5vh;
-    width: 15vw;
-    border: none;
+    justify-content: center;
+    width: 7rem;
+    height: 100%;
+    background: rgba(38, 50, 56, 0.5);
+    border-radius: 10px;
 
-    font-size: 120%;
-    color: white;
-    background-color:#407BFF ;
-    border-radius: 5px;
-    cursor: pointer;
-`
-
-export const Input = styled.input`
-    height: 5vh;
-    width: 100%;
-    border-radius: 1px;
-
-    &:hover{
-        transition: all 0.3 ease;
-        background-color: #E1E1E1;
-    }
-`
-export const Label = styled.label`
-    font-size: 15px;
+  }
 `

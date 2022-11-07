@@ -24,7 +24,9 @@ export const CadastrarCategoria = () => {
   return (
 
     <Section>
-    <MenuAdmin />
+    <div className="menu">
+          <MenuAdmin />
+        </div>
   <Main>
       <DivContainer>
         <DivLeft>

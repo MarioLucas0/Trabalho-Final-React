@@ -22,6 +22,7 @@ export const Catalogo = () => {
   useEffect(() => {
 
     setIsLoading(true)
+    console.log(produtos)
     api.get("/produtos")
       .then((response) => {
         
@@ -64,7 +65,6 @@ export const Catalogo = () => {
               <CardProduto produto={prod} key={index}/>
             )))}
           </DivCards>
-          
        
         </DivContainer>
       </Section>

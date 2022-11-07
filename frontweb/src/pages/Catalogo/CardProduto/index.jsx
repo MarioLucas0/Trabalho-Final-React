@@ -1,5 +1,5 @@
 
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import compra from "../../../assets/img/compra.svg";
 import { context } from "../../../context";
@@ -9,7 +9,6 @@ import {
 } from "./style";
 
 export const CardProduto = ({produto}) => {
-  const [quantidade,setQuantidade] = useState(0)
   const ctx = useContext(context)
   const {handleAddItemToCart} = useContext(context)
  
@@ -19,8 +18,7 @@ export const CardProduto = ({produto}) => {
 
     handleAddItemToCart(produto)
 
-  
-    
+
   }
 
 
