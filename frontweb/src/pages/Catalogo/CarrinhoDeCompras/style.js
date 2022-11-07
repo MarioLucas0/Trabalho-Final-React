@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const Section = styled.section`
 
   width: 100%;
-  height: 119rem;
+  height: 95.2rem;
   display: flex;
   align-items: center;
   display: flex;

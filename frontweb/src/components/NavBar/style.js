@@ -31,6 +31,7 @@ export const Nav = styled.nav`
   width: 38.3rem;
   height: 2.6rem;
 
+
 `
 export const DivRight = styled.nav`
 
@@ -45,6 +46,9 @@ export const DivRight = styled.nav`
  
  img {
   width: 3rem;
+ }
+ a {
+  display: contents;
  }
 
 `
