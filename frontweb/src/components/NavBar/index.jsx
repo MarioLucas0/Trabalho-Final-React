@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import carrinho from "../../assets/img/compra.svg";
@@ -6,6 +7,8 @@ import { DivRight, Header, Nav, Ul } from './style';
 
 export const NavBar = () => {
   const { productsCart } = useContext(context);
+
+  const {logado, setLogado} = useState(context)
     
   return (
     <Header className="menu">
@@ -19,10 +22,7 @@ export const NavBar = () => {
             <Link to="/catalogo">Catalogo</Link>
           </li>
           <li>
-            <Link to="/admin/produto">Admin</Link>
-          </li>
-          <li>
-            <Link to="/login">Login</Link>
+            <Link to="/admin/produto">Login</Link>
           </li>
         </Ul>
       </Nav>

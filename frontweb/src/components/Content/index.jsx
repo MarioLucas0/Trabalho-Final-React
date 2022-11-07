@@ -19,7 +19,7 @@ import { ProdutoInfo } from '../ProdutoInfo';
 export const Content = () => (
 
     <Routes>
-      <Route path="/" element={<Home />} exact={true}/>
+      <Route path="/home" element={<Home />} exact={true}/>
       <Route path="/catalogo" element={ <Catalogo /> } />
       <Route path="/catalogo/carrinho" element={ <CarrinhoCompras />} />
       <Route path="/admin/produto" element={ <Admin /> } />
@@ -29,7 +29,7 @@ export const Content = () => (
       <Route path="/admin/categoria/:id/atualizar" element={ <AtualizarCategoria /> } />
       <Route path="/admin/categoria" element={ <CategoriaInfo />} />
       <Route path="/catalogo/:id" element={ <ProdutoInfo /> } />
-      <Route path="/login" element={<Login/>}/>
+      <Route path="/" element={<Login/>}/>
    
       <Route path="*" element={<NotFound />}/>
 

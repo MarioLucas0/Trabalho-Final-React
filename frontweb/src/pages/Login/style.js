@@ -31,7 +31,7 @@ export const Card = styled.div`
 export const Titulo = styled.div`
     display: flex;
     align-items: center;
-    height: 20vh;
+    height: 10vh;
     
     padding: 0%;
     font-style: normal;
@@ -78,12 +78,13 @@ color: #407BFF;
 
 mix-blend-mode: normal;
 `
-export const Button = styled.p`
+export const Button = styled.button`
     display: flex;
     justify-content: center;
     align-items: center;
     height: 5vh;
     width: 15vw;
+    border: none;
 
     font-size: 120%;
     color: white;
@@ -101,4 +102,7 @@ export const Input = styled.input`
         transition: all 0.3 ease;
         background-color: #E1E1E1;
     }
+`
+export const Label = styled.label`
+    font-size: 15px;
 `
