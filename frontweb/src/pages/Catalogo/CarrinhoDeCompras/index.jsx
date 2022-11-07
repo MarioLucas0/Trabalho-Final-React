@@ -87,8 +87,6 @@ export const CarrinhoCompras = () => {
                 <DivIconFechar><img src={iconFechar} onClick={() => removalItem(product?.id)}/></DivIconFechar>  
               </DivInfos>
             </DivContainerCard>   
-         
-               
           )})}
         </DivContainer>
        <DivButtons>

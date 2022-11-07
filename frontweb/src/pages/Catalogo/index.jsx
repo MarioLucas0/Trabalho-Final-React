@@ -22,10 +22,12 @@ export const Catalogo = () => {
   useEffect(() => {
 
     setIsLoading(true)
+    console.log(produtos)
     api.get("/produtos")
       .then((response) => {
         
       setProdutos(response.data.content)
+      console.log(response.data.content)
     }).catch((err) => {
         console.error("ops! ocorreu um erro" + err);
       }).finally(() => {

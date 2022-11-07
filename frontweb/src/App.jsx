@@ -16,6 +16,7 @@ export const App = () => {
           <Footer />
         </Router>
       </ContextProvider>
+      
     </div>
   )
 }

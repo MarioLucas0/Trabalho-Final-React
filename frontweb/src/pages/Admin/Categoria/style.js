@@ -3,19 +3,18 @@ import styled from 'styled-components'
 export const Section = styled.section`
   
   width: 100%;
-
   display: flex;
+
 `
 
 export const Main = styled.div`
-  width: 100%;
+  width: 60%;
   padding: 1.5rem ;
-  
   grid-gap: 1rem;
   background: #FFFFFF;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
-  margin: 5.8rem auto;
+  margin: 5.8rem 0;
   margin-bottom: 31rem;
   overflow: hidden;
 
@@ -24,10 +23,10 @@ export const Main = styled.div`
 
 export const DivContainer = styled.div`
 
-    grid-gap: 4rem;
+    grid-gap: 3rem 1rem;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(4,10rem);
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,10rem);
 
 `
 export const DivInfo = styled.div`

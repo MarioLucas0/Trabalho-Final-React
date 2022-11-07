@@ -21,9 +21,7 @@ export const  ContextProvider = ({ children }) => {
     
       });
     } 
-
     setProductsCart(itemObject);
-
   }
 
   function aumentarItem(produto){

@@ -14,7 +14,7 @@ export const MenuAdmin = () => (
           <Link to="/admin/categoria">Categorias</Link>
         </li>
         <li>
-          <Link to="/cliente">Pedido</Link>
+          <Link to="/admin/pedido/listar">Pedido</Link>
         </li>
       </Ul>
     </Nav>

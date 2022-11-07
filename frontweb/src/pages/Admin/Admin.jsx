@@ -10,10 +10,10 @@ import {
 } from "./style";
 
 export const Admin = () => {
-
     const [produto,setProduto] = useState([])
+    const [busca, setBusca] = useState("");
     
-
+    const produtosFiltrados = produto?.filter((prod) => prod.nome.toUpperCase().includes(busca.toUpperCase()))
     useEffect(() => {
         api.get("/produtos")
           .then((response) => {
@@ -36,14 +36,14 @@ export const Admin = () => {
             </Link>
             
                 <DivInput>
-                    <input type="text" placeholder="Nome do produto"/>
+                    <input type="text" value={busca} placeholder="Nome do produto" onChange={(e) =>setBusca(e.target.value)} />
                     <img src={Pesquisa} alt="" />
                     <button>Limpar Filtro</button> 
                 </DivInput>
         </DivInputs>
 
         <DivCardCrud>
-            {produto?.map((produto,index) => (
+            {produtosFiltrados?.map((produto,index) => (
                 <ProdutoCrud produto={produto} key={index} />
             ))}
 

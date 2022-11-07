@@ -6,6 +6,9 @@ import { DivRight, Header, Nav, Ul } from './style';
 
 export const NavBar = () => {
   const { productsCart } = useContext(context);
+
+  /* Bernado */
+
     
   return (
     <Header className="menu">
@@ -21,6 +24,8 @@ export const NavBar = () => {
           <li>
             <Link to="/admin/produto">Admin</Link>
           </li>
+
+  
         </Ul>
       </Nav>
         <DivRight>
