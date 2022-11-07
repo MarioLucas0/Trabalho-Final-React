@@ -28,7 +28,9 @@ export const CategoriaInfo = () => {
 
   return (
     <Section >
-    <MenuAdmin />
+        <div className="menu">
+          <MenuAdmin />
+        </div>
         <DivButton>
           <Link to={"/admin/categoria/cadastrar"}>
             <ButtonAdicionarCategoria>Adicionar</ButtonAdicionarCategoria>

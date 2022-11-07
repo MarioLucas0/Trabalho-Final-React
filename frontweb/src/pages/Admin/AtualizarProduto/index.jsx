@@ -56,7 +56,9 @@ export const AtualizarProduto = () => {
 
   return (
     <Section>
-       <MenuAdmin />
+        <div className="menu">
+          <MenuAdmin />
+        </div>
       <Main>
           <DivContainer>
             <DivLeft>

@@ -8,6 +8,7 @@ export const Aside = styled.aside`
   background:  #FFFFFF;
   width: 30rem;
   min-height: 97.1rem;
+  height: 100%;
 
   
 
@@ -15,6 +16,7 @@ export const Aside = styled.aside`
   li {
     display: flex;
     border: 1px solid #E1E1E1;
+    
 
     a {
 
@@ -27,12 +29,14 @@ export const Aside = styled.aside`
     font-size: 1.5rem;
     
     }
+    
 
   }
 `
 
 export const Nav = styled.main`
   flex: 1;
+  height: 100vh;
  
 
 `
@@ -41,6 +45,7 @@ export const Ul = styled.ul`
   
   list-style: none;
   padding: 0;
+
 
 
 

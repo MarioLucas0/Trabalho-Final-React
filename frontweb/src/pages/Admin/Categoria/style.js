@@ -5,6 +5,85 @@ export const Section = styled.section`
   width: 100%;
   display: flex;
 
+  @media(max-width: 1300px) {
+    flex-direction: column;
+    .menu {
+    width: 100%;
+    height: 12rem;
+   
+    aside {
+      width: 100%;
+      height: 12rem;
+      min-height: 0;
+      main{
+        height: 100%;
+        ul{
+          height: 100%;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          li{
+            width: 27rem;
+             height: 5rem;
+             background: #F2F2F2;
+             border-radius: 100px;
+             &:hover {
+              background: rgba(64, 123, 255, 0.3);
+              color: #407BFF;
+            }
+           
+             a{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              padding: 0;
+              margin: 0;
+              &:hover {
+                color: #407BFF;
+            }
+             
+             }
+          }
+        }
+      }
+    }
+  }
+  }
+  @media(max-width: 990px) {
+    flex-direction: column;
+    .menu {
+      aside {
+        main{
+          ul{
+            li{
+              width:20rem;
+              height: 4.5rem; 
+          }
+        }
+      }
+    }
+  }
+  }
+  @media(max-width: 660px) {
+    flex-direction: column;
+    .menu {
+      aside {
+        main{
+          ul{
+            li{
+              width: 11rem;
+              height: 4.5rem;
+              
+          }
+        }
+      }
+    }
+  }
+  }
+  li {
+
+  }
+
 `
 
 export const Main = styled.div`
@@ -17,6 +96,10 @@ export const Main = styled.div`
   margin: 5.8rem 0;
   margin-bottom: 31rem;
   overflow: hidden;
+
+  @media(max-width: 1300px){
+    width: 80%;
+  }
 
   
 `

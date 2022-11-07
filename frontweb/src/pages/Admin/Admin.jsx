@@ -28,7 +28,10 @@ export const Admin = () => {
      
     return (
     <Section >
-    <MenuAdmin />
+        <div className="menu">
+          <MenuAdmin />
+        </div>
+  
         <Main>
         <DivInputs>
             <Link to="/admin/produto/cadastro" >

@@ -10,6 +10,23 @@ export const DivContainer = styled.div`
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
   height: 36.6rem;
 
+  @media (max-width: 1650px) {
+    width: 100%;
+  }
+  @media (max-width: 1250px) {
+    width: 85%;
+  }
+  @media (max-width: 800px) {
+    width: 90%;
+  }
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+ 
+
+
+
+
 `
 export const IconCompra= styled.div`
 

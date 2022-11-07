@@ -33,7 +33,9 @@ export const CadastroProduto = () => {
       
   return (
     <Section>
-       <MenuAdmin />
+      <div className="menu">
+          <MenuAdmin />
+        </div>
       <Main>
           <DivContainer>
             <DivLeft>
@@ -52,7 +54,7 @@ export const CadastroProduto = () => {
             </DivLeft>
 
             <DivDescricao>
-              <textarea placeholder="Descricao Produto" value={descricao}  onChange={(e) => setDescricao(e.target.value)}/>
+              <textarea   placeholder="Descricao Produto" value={descricao}  onChange={(e) => setDescricao(e.target.value)}/>
             </DivDescricao>
           </DivContainer>
           
