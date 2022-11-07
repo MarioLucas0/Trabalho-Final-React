@@ -12,7 +12,7 @@ export const App = () => {
         <ContextProvider>
           <Router>
             <NavBar />
-            <Content />
+             <Content />
             <Footer />
           </Router>
         </ContextProvider>

@@ -23,6 +23,7 @@ const GlobalStyle = createGlobalStyle`
   
    min-height:100%;
    position:relative;
+   overflow-x: hidden;
 
   }
 

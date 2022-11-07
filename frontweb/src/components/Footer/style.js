@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const Geral =styled.footer`
   width: 100%;
-  position: absolute;
+  position: relative;
   bottom: 0;
   left: 0;
     

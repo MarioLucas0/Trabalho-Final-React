@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import carrinho from "../../assets/img/compra.svg";
 import { context } from "../../context";
@@ -6,10 +6,9 @@ import { DivRight, Header, Nav, Ul } from './style';
 
 export const NavBar = () => {
   const { productsCart } = useContext(context);
-  const [menuInvisible,setMenuInvisible] = useState(false)
     
   return (
-    <Header menuInvisible={menuInvisible} setMenuInvisible={setMenuInvisible}>
+    <Header>
         <span>SerraCommerce</span>
       <Nav>
         <Ul>

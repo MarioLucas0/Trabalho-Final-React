@@ -6,6 +6,7 @@ export const Section = styled.section`
   height: 100%;
   min-height: 120rem;
   display: flex;
+  overflow-x: hidden;
   @media (max-width: 1650px) {
     width: 110%;
   }
