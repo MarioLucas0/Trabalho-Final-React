@@ -11,6 +11,9 @@ export const  DivContainer = styled.div`
   width: 100%;
   display: flex;
 
+  margin-block: 6rem;
+  margin-bottom: 34rem;
+
 
 `
 
@@ -61,7 +64,7 @@ export const  DivImg = styled.div`
 export const  DivRight = styled.div`
   width: 50%;
   height: 100%;
-  margin-left: 27rem;
+  margin-left: 16rem;
 
 
 `

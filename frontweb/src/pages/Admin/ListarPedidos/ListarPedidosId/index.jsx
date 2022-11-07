@@ -26,7 +26,9 @@ export const ListarPedidosId = () => {
 
     return (
       <Section>
-        <MenuAdmin />
+         <div className="menu">
+          <MenuAdmin />
+        </div>
       <Main>
         <DivInputs>  
             <DivInput>

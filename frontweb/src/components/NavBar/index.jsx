@@ -6,12 +6,10 @@ import { DivRight, Header, Nav, Ul } from './style';
 
 export const NavBar = () => {
   const { productsCart } = useContext(context);
-
-  /* Bernado */
-  const {logado, setLogado} = useState(context)
+  const [menuInvisible,setMenuInvisible] = useState(false)
     
   return (
-    <Header className="menu">
+    <Header menuInvisible={menuInvisible} setMenuInvisible={setMenuInvisible}>
         <span>SerraCommerce</span>
       <Nav>
         <Ul>

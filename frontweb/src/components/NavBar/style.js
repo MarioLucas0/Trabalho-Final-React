@@ -10,7 +10,6 @@ export const Header =  styled.header`
   background: #407BFF;
   box-shadow: 0px 20px 20px white;
   z-index: 1;
-  overflow: hidden;
 
   span {
 

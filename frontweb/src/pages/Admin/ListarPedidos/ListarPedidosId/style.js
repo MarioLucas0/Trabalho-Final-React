@@ -6,6 +6,85 @@ export const Section = styled.section`
   width: 100%;
   display: flex;
   align-items: center;
+  @media(max-width: 1200px) {
+    flex-direction: column;
+    .menu {
+    width: 100%;
+    height: 12rem;
+   
+    aside {
+      width: 100%;
+      height: 12rem;
+      min-height: 0;
+      main{
+        height: 100%;
+        ul{
+          height: 100%;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          li{
+            width: 27rem;
+             height: 5rem;
+             background: #F2F2F2;
+             border-radius: 100px;
+             &:hover {
+              background: rgba(64, 123, 255, 0.3);
+              color: #407BFF;
+            }
+           
+             a{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              padding: 0;
+              margin: 0;
+              &:hover {
+                color: #407BFF;
+            }
+             
+             }
+          }
+        }
+      }
+    }
+  }
+  }
+  @media(max-width: 990px) {
+    flex-direction: column;
+    .menu {
+      aside {
+        main{
+          ul{
+            li{
+              width:20rem;
+              height: 4.5rem; 
+          }
+        }
+      }
+    }
+  }
+  }
+  @media(max-width: 660px) {
+    flex-direction: column;
+    .menu {
+      aside {
+        main{
+          ul{
+            li{
+              width: 11rem;
+              height: 4.5rem;
+              
+          }
+        }
+      }
+    }
+  }
+  }
+  li {
+
+  }
+ 
  
 
 `
@@ -76,6 +155,11 @@ export const Main = styled.main`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    
+    @media(max-width: 1000px) {
+    width: 100%;
+
+  }
 
 `
 export const DivInputs = styled.div`
@@ -88,6 +172,18 @@ export const DivInputs = styled.div`
   display: flex;
   align-items: center;
   margin-top: 3rem;
+
+  
+  @media (max-width: 800px) {
+    width: 46rem;
+  }
+  @media (max-width: 800px) {
+    width: 37rem;
+  }
+  @media (max-width: 450px) {
+    width: 32rem; 
+  }
+    
 
 `
 
@@ -114,6 +210,22 @@ export const DivInput = styled.div`
     cursor: pointer;
   }
 
+  @media (max-width: 800px) {
+    width: 21rem;
+
+    input {
+      width: 17rem;
+    }
+  }
+
+  @media (max-width: 450px) {
+  
+    input {
+      width: 12rem;
+    }
+  }
+  
+
 
 `
 
@@ -128,6 +240,12 @@ export const ButtonLimpar = styled.button`
     cursor: pointer;
     margin-block: 1rem;
 
+    @media (max-width: 650px) {
+      width: 10rem;
+  }
+  @media (max-width: 450px) {
+      width: 80rem;
+  }
 `
 
 
@@ -138,6 +256,8 @@ export const DivInfos = styled.div`
   gap: 2rem;
   margin-bottom: 5rem;
   padding-block: 2rem;
+
+  
 
 
 
