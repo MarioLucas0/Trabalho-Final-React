@@ -9,14 +9,13 @@ export const App = () => {
 
   return (
     <div className="App">
-      <ContextProvider>
-        <Router>
-          <NavBar />
-           <Content />
-          <Footer />
-        </Router>
-      </ContextProvider>
-      
+        <ContextProvider>
+          <Router>
+            <NavBar />
+            <Content />
+            <Footer />
+          </Router>
+        </ContextProvider>
     </div>
   )
 }

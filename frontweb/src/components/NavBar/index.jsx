@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import carrinho from "../../assets/img/compra.svg";
 import { context } from "../../context";
@@ -8,7 +8,7 @@ export const NavBar = () => {
   const { productsCart } = useContext(context);
 
   /* Bernado */
-
+  const {logado, setLogado} = useState(context)
     
   return (
     <Header className="menu">
@@ -24,8 +24,6 @@ export const NavBar = () => {
           <li>
             <Link to="/admin/produto">Admin</Link>
           </li>
-
-  
         </Ul>
       </Nav>
         <DivRight>
