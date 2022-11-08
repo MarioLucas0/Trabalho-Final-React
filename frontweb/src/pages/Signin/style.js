@@ -11,6 +11,14 @@ export const  DivContainer = styled.div`
   display: flex;
   margin-block: 6rem;
   margin-bottom: 12rem;
+
+  @media(max-width: 1500px) {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+
 `
 
 export const DivLeft = styled.div`
@@ -38,6 +46,10 @@ export const DivLeft = styled.div`
     color: #9E9E9E;
     margin-right: 13rem;
   }
+
+  @media(max-width: 1500px) {
+    display: none;
+  }
 `
 export const  DivImg = styled.div`
   width: 53rem ;
@@ -46,12 +58,26 @@ export const  DivImg = styled.div`
   img {
    width: 100%;
   }
+
+  
+
+
 `
 
 export const  DivRight = styled.div`
   width: 50%;
   height: 100%;
   margin-left: 16rem;
+
+  @media(max-width: 1500px) { 
+    margin-left: 0;
+  }
+  @media(max-width: 900px) {
+    width: 75%;
+  }
+  @media(max-width: 600px) {
+    width: 85%;
+  }
 `
 export const  DivCard = styled.div`
     width: 55rem;
@@ -113,6 +139,22 @@ export const  DivCard = styled.div`
     color: #407BFF;
     margin-left: 1rem;
   }
+
+  @media(max-width: 1500px) {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+
+    input {
+      width: 100%;
+    }
+    h1 {
+      width: 100%;
+      padding-inline: 1rem;
+    }
+  }
+
 `
 export const DivInput = styled.div`
   display: flex;
@@ -151,6 +193,14 @@ export const DivButton = styled.div`
     height: 100%;
     background: rgba(38, 50, 56, 0.5);
     border-radius: 10px;
+  }
+  @media(max-width: 1500px) {
+    width: 100%;
+    align-items: center;
+
+    transition: all 0.5s ease-in-out;
+
+
   }
 `
 

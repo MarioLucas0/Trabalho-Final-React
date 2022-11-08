@@ -121,6 +121,24 @@ export const  DivCard = styled.div`
     color: #407BFF;
     margin-left: 1rem;
   }
+
+  @media(max-width: 1450px) {
+    height: 100%;
+    h1 {
+      font-size: 2.9rem;
+      
+    margin-inline: 1rem;
+
+    }
+    input {
+      width: 100%;
+    }
+
+  }
+
+  @media(max-width: 500px) {
+    width: 90%;
+  }
 `
 export const DivInput = styled.div`
   display: flex;
@@ -161,6 +179,11 @@ export const DivButton = styled.div`
     background: rgba(38, 50, 56, 0.5);
     border-radius: 10px;
   }
+  @media(max-width: 1450px) {
+    
+    width: 80%;
+
+  }
 `
 export const DivInput2 = styled.div`
   display: flex;
@@ -172,6 +195,11 @@ export const Inputs= styled.div`
   display: flex;
   gap: 3rem;
   justify-content: center;
+
+  @media(max-width: 1440px) {
+    width: 90%;
+    flex-direction: column;
+  }
 
 `
 
