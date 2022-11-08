@@ -1,9 +1,7 @@
 import { useContext , useState} from 'react';
-import 'bootstrap/dist/css/bootstrap.css';
 import {FaBars, FaTimes} from "react-icons/fa"
 import { Link } from 'react-router-dom';
 import carrinho from "../../assets/img/compra.svg";
-import Hamburger from 'hamburger-react'
 import { context } from "../../context/index";
 import "./style.css"
 
