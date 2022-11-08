@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-
+import { toast } from 'react-toastify';
 export const context = createContext({});
 
 export const  ContextProvider = ({ children }) => {
@@ -10,8 +10,6 @@ export const  ContextProvider = ({ children }) => {
     const itemObject = [...productsCart];
     const item = itemObject.find((product) => product.id === produto.id);
 
-   
-   
     if (!item) {
       
       itemObject.push({
@@ -24,8 +22,8 @@ export const  ContextProvider = ({ children }) => {
         clientId: clientId2
       });
     } 
-    
     setProductsCart(itemObject);
+    toast.info("Item Adicionado ao Carrinho")
   }
 
 
@@ -48,11 +46,11 @@ export const  ContextProvider = ({ children }) => {
     if (item && item.quantidade > 1) {
       item.quantidade = item.quantidade - 1;
       setProductsCart(itemObject);
+  
     } else {
       const arrayFiltered = itemObject.filter((product) => product.id !== id);
       setProductsCart(arrayFiltered);
     }
-
   }
 
   function removalItem(id) {
@@ -60,12 +58,15 @@ export const  ContextProvider = ({ children }) => {
     const arrayFiltrado = itemObject.filter((product) => product.id !== id);
 
     setProductsCart(arrayFiltrado);
+    toast.info("Item Removido")
+
   }
 
   
   function clearCart() {
     console.log(productsCart)
     setProductsCart([]);
+    toast.info("Carrinho Limpo")
 
   }
 

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { toast } from 'react-toastify';
 import api from "../../../services/api";
 import { MenuAdmin } from "../MenuAdmin";
 import {
@@ -26,9 +27,10 @@ export const CadastroProduto = () => {
         "id": categoriaid
       }
   }).then(res => {
-          console.log(res)
-    
-  }) 
+    toast.success("Produto Cadastrado com Sucesso!")
+  }).catch((err) => {
+    toast.error("ops! ocorreu um erro")
+  })   
   }
       
   return (

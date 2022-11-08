@@ -34,10 +34,10 @@ export const EditarCliente = () => {
       "cep": cep
   }
   }).then(res => {
-     console.log(res.data?.id)
+    toast.success("Cliente Atualizado com Sucesso!")
   }).catch((err) => {
     toast.error("ops! ocorreu um erro")
-  })
+  })  
   }
 
 

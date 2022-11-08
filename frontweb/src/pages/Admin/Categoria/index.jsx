@@ -22,6 +22,7 @@ export const CategoriaInfo = () => {
   function excluirCategoria (id)  { 
   api.delete(`/categoria/${id}`).then(() => {
       setSuccess(true)
+      toast.success("Categoria Deletada!")
   })  
   }
 

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
+import { toast } from 'react-toastify';
 import api from "../../../../services/api";
 import { MenuAdmin } from "../../MenuAdmin/index.jsx";
 import { ButtonEnviar, DivContainer, DivDescricao, DivInputs, DivLeft, Main, Section, TextPrincipal } from "./style.js";
@@ -15,9 +16,11 @@ export const AtualizarCategoria = () => {
     api.put(`/categoria/${id}`,{
       "nome": nome,
       "descricao": descricao
-    }).then(() => {
-      
-    })  
+    }).then(res => {
+      toast.success("Categoria Atualizada com Sucesso!")
+    }).catch((err) => {
+      toast.error("ops! ocorreu um erro")
+    })   
   }
 
   return (

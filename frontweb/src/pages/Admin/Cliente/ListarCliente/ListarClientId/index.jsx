@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { toast } from 'react-toastify';
 import Pesquisa from "../../../../../assets/img/Pesquisa.svg";
 import api from "../../../../../services/api";
 import { MenuAdmin } from "../../../MenuAdmin";
@@ -19,8 +20,8 @@ export const ListarClientesId = () => {
 
   const busca = (id) => { 
     api.get(`/clientes/${id}`).then((res) => {
-      console.log(res)
       setClienteId(res.data) 
+      toast.success("Busca Bem sucedida")
   })
   }
 

@@ -66,7 +66,6 @@ const Signup = () => {
    
  
     cadastrarCliente()
-    alert("Usuário cadatrado com sucesso!");
     //navigate("/");
   };
 

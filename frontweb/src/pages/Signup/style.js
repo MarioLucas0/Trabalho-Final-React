@@ -124,6 +124,8 @@ export const  DivCard = styled.div`
 
   @media(max-width: 1450px) {
     height: 100%;
+    padding-bottom: 11rem;
+
     h1 {
       font-size: 2.9rem;
       

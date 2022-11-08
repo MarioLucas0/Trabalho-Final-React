@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { toast } from 'react-toastify';
 import api from "../../../../services/api";
 import { MenuAdmin } from "../../MenuAdmin";
 import { ButtonEnviar, DivContainer, DivDescricao, DivInputs, DivLeft, Main, Section, TextPrincipal } from "./style.js";
@@ -15,9 +16,10 @@ export const CadastrarCategoria = () => {
         "nome":  nome,
         "descricao": descricao,
     }).then(res => {
-        alert("Categoria cadastrada com Sucesso!");
-      
-    }) 
+      toast.success("Categoria Cadastrada com Sucesso!")
+    }).catch((err) => {
+      toast.error("ops! ocorreu um erro")
+    })  
   }
 
 

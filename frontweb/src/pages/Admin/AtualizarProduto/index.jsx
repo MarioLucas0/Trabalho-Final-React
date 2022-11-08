@@ -1,6 +1,7 @@
 
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { toast } from 'react-toastify';
 import api from "../../../services/api";
 import { MenuAdmin } from "../MenuAdmin";
 import { ButtonEnviar, DivContainer, DivDescricao, DivInputs, DivLeft, Main, Section, TextPrincipal } from "./style.js";
@@ -48,9 +49,11 @@ export const AtualizarProduto = () => {
           "id": categoriaid
         }
     }).then(res => {
-            console.log(res)
+        toast.success("Produto Atualizado  com Sucesso!")
       
-    }) 
+    }).catch((err) => {
+      toast.error("ops! ocorreu um erro")
+    })   
   }
 
 

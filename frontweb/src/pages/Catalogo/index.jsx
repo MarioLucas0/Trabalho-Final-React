@@ -41,6 +41,7 @@ export const Catalogo = () => {
   const limpar = () => {
     if(busca != "") {
       setBusca("")
+      
     }
   }
 
