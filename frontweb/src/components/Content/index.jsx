@@ -25,7 +25,7 @@ export const Content = () => (
   
 
     <Routes>
-      <Route path="/home" element={<Home />} exact={true}/>
+      <Route path="/" element={<Home />} exact={true}/>
       <Route path="/catalogo" element={ <Catalogo /> } />
       <Route path="/catalogo/carrinho" element={ <CarrinhoCompras />} />
       <Route path="/admin/produto" element={ <Admin /> } />

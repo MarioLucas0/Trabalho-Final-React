@@ -13,7 +13,8 @@ export const Header =  styled.header`
   overflow: hidden;
 
   span {
-
+  
+  
   font-weight: 700;
   font-size: 2.4rem;
   line-height: 3.3rem;
@@ -27,10 +28,9 @@ export const Header =  styled.header`
 `
 
 export const Nav = styled.nav`
-
-  width: 38.3rem;
-  height: 2.6rem;
-
+  /* width: 38.3rem;
+  height: 2.6rem; */
+  width: 20%;
 `
 export const DivRight = styled.nav`
 
@@ -66,4 +66,12 @@ export const Ul = styled.ul`
     
   }
 
+`
+export const Hamburguer = styled.div`
+  position: absolute;
+  cursor: pointer;
+  @media (max-width: 1080px){
+    opacity: 1;
+  }
+ 
 `
