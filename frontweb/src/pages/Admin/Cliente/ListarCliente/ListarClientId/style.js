@@ -3,11 +3,9 @@ import styled from 'styled-components'
 
 export const Section = styled.section`
 
- 
+  width: 100%;
   display: flex;
-  justify-content: center;
-  justify-content: space-between;
-
+  align-items: center;
   @media(max-width: 1200px) {
     flex-direction: column;
     .menu {
@@ -87,28 +85,31 @@ export const Section = styled.section`
 
   }
  
+ 
 
 `
 
 
 export const DivContainer = styled.div`
 
-  
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
+  width: 70%;
   background: #FFFFFF;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
+  margin-top: 5rem;
+  margin-bottom: 38rem;
   overflow: hidden;
-  width: 86%;
-  margin-top: 4.7rem;
-  padding-bottom: 3rem;
-  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  height: 44rem;
+  overflow: auto;
 
-  @media(max-width: 950px) {
-    width: 90%;
-   
+  h2 {
+    font-size: 3rem;
+  }
+
+  span {
+    font-size: 2rem;
   }
 
 `
@@ -124,16 +125,6 @@ export const DivButton = styled.div`
   height: 6rem;
   border-radius: 10px;
   cursor: pointer;
-  margin-left: 2rem;
-  display: flex;
-  justify-content: center;
-
-  a {
-    font-size: 3rem;
-    font-weight: 700;
-    color: rgba(255,255,255,0.5);
-  }
- 
 
 
   P{
@@ -159,53 +150,119 @@ export const DivButton = styled.div`
 `
 
 export const Main = styled.main`
-
-    width: 100%;
-    margin-bottom: 38rem;
+    width: 70%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    @media(max-width: 1000px) {
+    width: 100%;
+
+  }
 
 `
+export const DivInputs = styled.div`
+
+  width: 65rem;
+  height: 5.5rem;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  margin-top: 3rem;
+
+  
+  @media (max-width: 800px) {
+    width: 46rem;
+  }
+  @media (max-width: 800px) {
+    width: 37rem;
+  }
+  @media (max-width: 450px) {
+    width: 32rem; 
+  }
+    
+
+`
+
+
+export const DivInput = styled.div`
+
+  width: 39rem;
+  border-bottom: 1px solid #E1E1E1;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 1.2rem;
+
+  input[type="text"]
+   {
+    
+    width: 29rem;
+    height: 2.8rem;
+    border: none;
+    outline: 0;
+    
+
+  }
+  img {
+    cursor: pointer;
+  }
+
+  @media (max-width: 800px) {
+    width: 21rem;
+
+    input {
+      width: 17rem;
+    }
+  }
+
+  @media (max-width: 450px) {
+  
+    input {
+      width: 12rem;
+    }
+  }
+  
+
+
+`
+
+export const ButtonLimpar = styled.button`
+
+    width: 20rem;
+    height: 3.5rem;
+    border-radius: 10px;
+    margin-left: 1.7rem;
+    background: #FFFFFF;
+    border: 1px solid #E1E1E1;
+    cursor: pointer;
+    margin-block: 1rem;
+
+    @media (max-width: 650px) {
+      width: 10rem;
+  }
+  @media (max-width: 450px) {
+      width: 80rem;
+  }
+`
+
 
 export const DivInfos = styled.div`
 
-  width: 100%;
-  margin-inline: 2rem;
+  margin-inline: 3rem;
   display: grid;
-  grid-template-columns: repeat(2,1fr);
   gap: 2rem;
   margin-bottom: 5rem;
+  padding-block: 2rem;
 
-  @media(max-width: 950px) {
-   
-    display: flex;
-    flex-direction: column;
-  }
+  
+
 
 
 `
-export const DivInfo = styled.div`
 
-    height: 40rem;
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    overflow: auto;
-    background: #EDEDED;
-    box-shadow: 0px 4px 20px rgb(0 0 0 / 25%);
-    border-radius: 20px;
-    border: 1px solid #E1E1E1;
-
-    span {
-      font-size: 1.4rem;
-
-    }
-    p{
-      border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-      padding-bottom: 0.5rem;
-    }
-
-`
 
 export const DivClient = styled.div`
     display: flex;
@@ -248,19 +305,6 @@ export const DivButtons = styled.div`
 
 `
 
-export const DivRemove = styled.div`
-
-  display: flex;
-  justify-content: end;
-  cursor: pointer;
-
-  img  {
-    height: 2.5rem;
-    margin-right: 1rem;
-  }
-
-
-`
 export const DivItemsPedido = styled.div`
     display: flex;
     flex-direction: column;
@@ -280,6 +324,10 @@ export const DivItemsPedido = styled.div`
   
 
 `
+
+
+
+
 
 
 

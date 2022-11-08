@@ -1,4 +1,5 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
+import { toast } from 'react-toastify';
 import iconFechar from "../../../assets/img/fechar.png";
 import { context } from "../../../context";
 import api from "../../../services/api";
@@ -14,6 +15,7 @@ export const CarrinhoCompras = () => {
     aumentarItem
   } = useContext(context);
 
+  const [clientCart,setClientCart] = useState()
 
 
 
@@ -30,28 +32,28 @@ export const CarrinhoCompras = () => {
         quantidade: productsCart[i].quantidade
       })
     }
-
-    console.log(novoArray)
+    
     
     api.post("/pedido",{
       "id": 0,
       "dataEntrega": "17/07/2000",
       "dataEnvio": "17/07/2000",
       "client": {
-        "id": 1
+        "id": productsCart[0].clientId
       },
       "items": novoArray,
       "valorTotal": totalPrice.toFixed(2),
     }).then((response) => {
-      console.log(response)
-
+      toast.info("Pedido Realizado com sucesso")
     }).catch((err) => {
-      console.error("ops! ocorreu um erro" + err);
+      toast.error("ops! ocorreu um erro")
     }).finally(() => {
     
     });   
  }
 
+
+ 
 
 
   return (
@@ -81,6 +83,8 @@ export const CarrinhoCompras = () => {
                   <span>SUB TOTAL</span>
                   <p>R$ {subTotal.toFixed(2)}</p>
                   <span>QUANTIDADE: {product?.quantidade}</span>
+                 
+              
                   <button onClick={() => aumentarItem(product)}>+</button>
                   <button onClick={() => removerItem(product.id)}>-</button>
                 </DivInfo> 
@@ -90,7 +94,6 @@ export const CarrinhoCompras = () => {
           )})}
         </DivContainer>
        <DivButtons>
-        
         <ButtonFazerPedido onClick={comprar}>Realizar Pedido</ButtonFazerPedido>
         <ButtonLimpar onClick={clearCart}>Limpar Carrinho</ButtonLimpar>
         <p>Valor  Total:  R$ {totalPrice.toFixed(2)}</p>

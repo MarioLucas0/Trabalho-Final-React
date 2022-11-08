@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const Section = styled.section`
 
   width: 100%;
-  height: 119rem;
+  height: 95.2rem;
   display: flex;
   align-items: center;
   display: flex;
@@ -14,7 +14,8 @@ export const Section = styled.section`
 `
 export const Main = styled.main`
 
-  width: 136rem;
+  
+  width: 90%; 
   max-height: 82rem;
   background: #FFFFFF;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
@@ -31,11 +32,20 @@ export const Main = styled.main`
 `
 
 export const DivContainer = styled.div`
- width: 80%;
- height: 30%;
- border-radius: 15px;
- min-height: 57rem;
- overflow: auto;
+
+  width: 80%;
+  height: 30%;
+  border-radius: 15px;
+  min-height: 57rem;
+  overflow: auto;
+
+ @media(max-width: 900px) {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+ }
+
 
 
 `
@@ -50,9 +60,13 @@ export const DivContainerCard = styled.div`
  box-shadow: 0px 4px 20px rgb(0 0 0 / 15%);
  padding: 1rem;
  border-radius: 15px;
- 
+
+ @media(max-width: 900px) {
+  flex-direction: column;
+  align-items: center;
+ }
   
- 
+
 `
 export const DivImg = styled.div`
   width: 10rem;
@@ -62,6 +76,11 @@ export const DivImg = styled.div`
     max-width: 12rem;
     height: 15rem;
   }
+
+  @media(max-width: 700px) {
+    margin-bottom: 3rem;
+  
+ }
 
 `
 
@@ -86,6 +105,14 @@ export const DivInfo = styled.div`
     font-weight: 800;
     margin-bottom: 1rem;
   }
+
+  @media(max-width: 700px) {
+    width: 100%;
+   border-left: none;
+  
+}
+
+
 
 `
 export const TextoPrincipal = styled.h1`
@@ -169,6 +196,12 @@ export const DivInfos = styled.div`
     color: white;
     margin-left: 1rem;
   }
+
+  @media(max-width: 900px) {
+  
+   border: 1px solid  #E1E1E1;
+   padding: 1rem;
+}
 
 `
 

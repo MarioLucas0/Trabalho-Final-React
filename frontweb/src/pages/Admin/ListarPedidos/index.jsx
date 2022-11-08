@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { toast } from 'react-toastify';
+import remove from "../../../assets/img/fechar.png";
 import api from "../../../services/api";
 import { MenuAdmin } from "../MenuAdmin/index";
 import {
   DivButton, DivClient, DivContainer, DivInfo, DivInfoPedido, DivInfos,
-  DivItemsPedido, Main, Section
+  DivItemsPedido, DivRemove, Main, Section
 } from "./style";
 export const ListarPedidos = () => {
    const [pedidos,setPedidos] = useState([])
@@ -15,6 +17,13 @@ export const ListarPedidos = () => {
       console.log(res.data)
   }) 
   },[])
+
+  function excluirPedido (id)  {  
+    api.delete(`/pedido/${id}`).then((res) => {
+      toast.info("Pedido Deletado com Sucesso!")
+    })  
+    }
+  
   
     return (
       <Section>
@@ -28,6 +37,9 @@ export const ListarPedidos = () => {
                   <DivInfo key={index}> 
                 
                     <DivClient>
+                    <DivRemove onClick={() => {excluirPedido(pedidos?.id)}}>
+                        <img src={remove} alt="" />
+                      </DivRemove>
                       <h2>DADOS CLIENTE</h2>
                       <span>CPF: {pedidos?.client.cpf}</span> 
                       <span>EMAIL: {pedidos?.client.email}</span>

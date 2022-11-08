@@ -89,7 +89,19 @@ export const Section = styled.section`
  
 
 `
+export const DivRemove = styled.div`
 
+  display: flex;
+  justify-content: end;
+  cursor: pointer;
+
+  img  {
+    height: 2.5rem;
+    margin-right: 1rem;
+  }
+
+
+`
 
 export const DivContainer = styled.div`
 
@@ -248,19 +260,6 @@ export const DivButtons = styled.div`
 
 `
 
-export const DivRemove = styled.div`
-
-  display: flex;
-  justify-content: end;
-  cursor: pointer;
-
-  img  {
-    height: 2.5rem;
-    margin-right: 1rem;
-  }
-
-
-`
 export const DivItemsPedido = styled.div`
     display: flex;
     flex-direction: column;
