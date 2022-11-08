@@ -44,7 +44,7 @@ export const CarrinhoCompras = () => {
       "items": novoArray,
       "valorTotal": totalPrice.toFixed(2),
     }).then((response) => {
-      toast.info("Pedido Realizado com sucesso")
+      toast.success("Pedido Realizado com sucesso")
     }).catch((err) => {
       toast.error("ops! ocorreu um erro")
     }).finally(() => {

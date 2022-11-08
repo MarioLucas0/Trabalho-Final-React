@@ -11,6 +11,8 @@
   height: 75px;
   background-color: #407BFF;
   color: white;
+  transition: all 0.5s ease-in-out;
+ 
 }
 .logo{
   font-size: 30px;
@@ -21,6 +23,7 @@
   justify-content: flex-end;
   list-style: none;
   width: 75%;
+
 }
 
 .home,
@@ -55,10 +58,12 @@
       display: block;
       list-style: none;
       left: 0;
-      background-color: #285ed2;
+      background-color: #407BFF;
       top :75px;
       transition: all 0.5s ease-out;
       width: 100%;
+      transition: all 0.5s ease-in-out;
+      z-index: 10;
   }
 
   .home,
@@ -69,7 +74,7 @@
       text-align: center;
       padding: 32px;
       width: 100%;
-      transition: all 0.5s ease;
+   
   }
 
   .mobile-menu-icon{
@@ -83,5 +88,6 @@
       outline: none;
       top: 15px;
       right: 25px;
+      
   }
 }
