@@ -59,8 +59,7 @@ export const CarrinhoCompras = () => {
   return (
     <Section>
         <TextoPrincipal>CARRINHO DE COMPRAS</TextoPrincipal>
-      <Main>
-          
+      <Main> 
         <DivContainer>
           {productsCart?.map((product,index) => {
             

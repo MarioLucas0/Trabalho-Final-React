@@ -4,7 +4,7 @@ import styled from 'styled-components'
 export const Section = styled.section`
 
   width: 100%;
-  height: 80rem;
+
   display: flex;
   justify-content: center;
 
@@ -12,14 +12,18 @@ export const Section = styled.section`
 
 export const Main = styled.main`
 
-  width: 136rem;
+  width: 80%;
   background: #FFFFFF;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
   margin-top: 5.6rem;
-
   display: flex;
   justify-content: space-between;
+  margin-bottom: 10rem;
+
+  @media(max-width: 1360px) {
+    flex-direction: column;
+  } 
 
 
 `
@@ -27,7 +31,7 @@ export const Main = styled.main`
 
 export const DivContainer = styled.div`
 
-  width: 24.7rem;
+  width: 80%;
   display: flex;
   flex-direction: column;
   background: #FFFFFF;
@@ -53,13 +57,16 @@ export const DivContainer = styled.div`
   margin-left: 1.5rem;
 
   }
+  @media(max-width: 700px) {
+    margin-left:4rem;
+  }
   
 
 `
 
 export const DivImg = styled.div`
 
-  width: 58.6rem;
+  width: 100%;
   height: 39.7rem;
   padding:1.8rem  4.9rem  0.7rem 3.9rem;
   border: 1px solid #E1E1E1;
@@ -71,8 +78,12 @@ export const DivImg = styled.div`
   justify-content: center;
   img {
     width: 65%;
-    max-width: 35rem;
-    height: 35rem ;
+     height: 80%;
+  }
+
+  @media(max-width: 750px) {
+    width: 100%;
+    height: 30rem;
   }
 
 `
@@ -80,7 +91,7 @@ export const DivImg = styled.div`
 
 export const DivInfo = styled.div`
 
-  width: 59.6rem;
+  width: 80%;
   padding: 1.4rem 1.9rem 3.2rem 2.1rem;
 
 
@@ -125,7 +136,7 @@ export const DivPreco = styled.div`
 `
 export const Descricao = styled.div`
 
-  width: 58.6rem;
+  width: 80%;
   height: 59.7rem;
   border: 1px solid #E1E1E1;
   margin: 9.7rem 6rem 9rem 6.7rem;
@@ -133,6 +144,9 @@ export const Descricao = styled.div`
 
   p {
     padding: 3.8rem 3.4rem 3.4rem 2.9rem;
+  }
+  @media(max-width: 700px) {
+    margin-left:4rem;
   }
 
 `
