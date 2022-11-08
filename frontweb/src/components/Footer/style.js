@@ -89,8 +89,6 @@ export const Icones = styled.div`
     flex-direction: initial;
     display: flex;
     align-items: center;
-  
-
 
 `
 export const Icon = styled.p`
