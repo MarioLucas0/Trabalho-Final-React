@@ -19,10 +19,18 @@ export const Container = styled.div`
 export const Row = styled.div`
     display: grid;
     grid-template-columns: repeat(4,1fr);
+    
+    @media(max-width: 1000px) {
+        grid-template-columns: repeat(2,1fr);
+        text-align: center;
+    }
 `
 export const Col = styled.div`
-    width: 25%;
+   
+    width: 100%;
     padding: 0 15px;
+
+
 `
 export const Texto = styled.div`
     font-size: 22px;
@@ -72,11 +80,16 @@ export const Button = styled.button`
     border-color: white;
 `
 export const Icones = styled.div`
-    width: 20%;
+   
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     margin-left: 2rem;
+    width: 100%;
+    flex-direction: initial;
+    display: flex;
+    align-items: center;
+  
 
 
 `
@@ -90,4 +103,11 @@ export const Icon = styled.p`
         width: 2.5rem;
         height: 2.5rem;
     }
+    @media(max-width: 1000px) {
+
+        width: 100%;
+        flex-direction: initial;
+        display: flex;
+
+}   
 `
