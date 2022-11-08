@@ -6,7 +6,7 @@ import { Footer } from './components/Footer';
 import { NavBar } from './components/NavBar';
 import { AuthProvider } from './context/auth';
 import { ContextProvider } from './context/index';
-import {AuthProvider} from './context/AuthProviderLogin/AuthProvider'
+// import {AuthProvider} from './context/AuthProviderLogin/AuthProvider'
 
 export const App = () => {
   
