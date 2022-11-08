@@ -6,6 +6,8 @@ import { CadastroProduto } from '../../pages/Admin/CadastroProduto';
 import { CategoriaInfo } from '../../pages/Admin/Categoria';
 import { CadastrarCategoria } from '../../pages/Admin/Categoria/CadastrarCategoria';
 import { AtualizarCategoria } from '../../pages/Admin/Categoria/CategoriaAtualizar';
+import { ListarClientes } from '../../pages/Admin/Cliente/ListarCliente';
+import { ListarClientesId } from '../../pages/Admin/Cliente/ListarCliente/ListarClientId';
 import { ListarPedidos } from '../../pages/Admin/ListarPedidos';
 import { ListarPedidosId } from '../../pages/Admin/ListarPedidos/ListarPedidosId';
 import { CarrinhoCompras } from '../../pages/Catalogo/CarrinhoDeCompras';
@@ -30,11 +32,10 @@ export const Content = () => (
   
 
     <Routes>
-          <Route exact path="/home" element={<Private Item={Home} />} />
-          <Route path="/" element={<Signin />} />
-          <Route exact path="/signup" element={<Signup />} />
-          <Route path="*" element={<Signin />} />
-  {/*     <Route path="/" element={<Home />} exact={true}/> */}
+      <Route exact path="/home" element={<Private Item={Home} />} />
+      <Route path="/" element={<Signin />} />
+      <Route exact path="/signup" element={<Signup />} />
+      <Route path="*" element={<Signin />} />
       <Route path="/catalogo" element={ <Catalogo /> } />
       <Route path="/catalogo/carrinho" element={ <CarrinhoCompras />} />
       <Route path="/admin/produto" element={ <Admin /> } />
@@ -44,12 +45,11 @@ export const Content = () => (
       <Route path="/admin/categoria/:id/atualizar" element={ <AtualizarCategoria /> } />
       <Route path="/admin/pedido/listar" element={ <ListarPedidos /> } />
       <Route path="/admin/pedido/listar/id" element={<ListarPedidosId />} />
+      <Route path="/admin/cliente/listar" element={ <ListarClientes/> } />
+      <Route path="/admin/cliente/listar/id" element={ <ListarClientesId /> } />
       <Route path="/admin/categoria" element={ <CategoriaInfo />} />
       <Route path="/catalogo/:id" element={ <ProdutoInfo /> } />
- 
-  
       <Route path="*" element={<NotFound />}/>
-
     </Routes>
   
 

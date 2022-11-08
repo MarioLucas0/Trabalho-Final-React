@@ -29,7 +29,7 @@ const Signin = () => {
       setError(res);
       return;
     }
-    navigate("/home");
+    navigate("/home"); 
   };
 
 

@@ -1,4 +1,5 @@
 import { useContext, useState } from "react";
+import { toast } from 'react-toastify';
 import iconFechar from "../../../assets/img/fechar.png";
 import { context } from "../../../context";
 import api from "../../../services/api";
@@ -31,22 +32,21 @@ export const CarrinhoCompras = () => {
         quantidade: productsCart[i].quantidade
       })
     }
-
+    
     
     api.post("/pedido",{
       "id": 0,
       "dataEntrega": "17/07/2000",
       "dataEnvio": "17/07/2000",
       "client": {
-        "id": productsCart[1].clientId
+        "id": productsCart[0].clientId
       },
       "items": novoArray,
       "valorTotal": totalPrice.toFixed(2),
     }).then((response) => {
-      console.log(response)
-
+      toast.info("Pedido Realizado com sucesso")
     }).catch((err) => {
-      console.error("ops! ocorreu um erro" + err);
+      toast.error("ops! ocorreu um erro")
     }).finally(() => {
     
     });   

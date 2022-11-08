@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { toast } from 'react-toastify';
 import Input from "../../components/Input";
 import { context } from "../../context";
 import useAuth from "../../hooks/useAuth.js";
@@ -40,8 +41,11 @@ const Signup = () => {
   }
   }).then(res => {
      console.log(res.data?.id)
-     ctx.setClientId(res.data?.id)  
-  }) 
+     ctx.setClientId(res.data?.id) 
+     toast.info("Cliente Registrado com sucesso!") 
+  }).catch((err) => {
+    toast.error("ops! ocorreu um erro")
+  })
   }
 
    const  handleSignup =  () => {

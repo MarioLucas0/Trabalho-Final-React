@@ -99,6 +99,7 @@ export const Main = styled.div`
   overflow: hidden;
 
   @media(max-width: 1300px){
+    height: 62rem;
     width: 80%;
     margin-inline: 11rem;
   }
