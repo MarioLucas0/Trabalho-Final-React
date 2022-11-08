@@ -6,6 +6,7 @@ import { CadastroProduto } from '../../pages/Admin/CadastroProduto';
 import { CategoriaInfo } from '../../pages/Admin/Categoria';
 import { CadastrarCategoria } from '../../pages/Admin/Categoria/CadastrarCategoria';
 import { AtualizarCategoria } from '../../pages/Admin/Categoria/CategoriaAtualizar';
+import { EditarCliente } from '../../pages/Admin/Cliente/AtualizarCliente';
 import { ListarClientes } from '../../pages/Admin/Cliente/ListarCliente';
 import { ListarClientesId } from '../../pages/Admin/Cliente/ListarCliente/ListarClientId';
 import { ListarPedidos } from '../../pages/Admin/ListarPedidos';
@@ -48,6 +49,7 @@ export const Content = () => (
       <Route path="/admin/cliente/listar" element={ <ListarClientes/> } />
       <Route path="/admin/cliente/listar/id" element={ <ListarClientesId /> } />
       <Route path="/admin/categoria" element={ <CategoriaInfo />} />
+      <Route path="/admin/cliente/:id/editar" element={ <EditarCliente />} />
       <Route path="/catalogo/:id" element={ <ProdutoInfo /> } />
       <Route path="*" element={<NotFound />}/>
     </Routes>

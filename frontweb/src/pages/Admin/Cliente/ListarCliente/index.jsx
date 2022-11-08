@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { toast } from 'react-toastify';
+import editar from "../../../../assets/img/edit.png";
 import remove from "../../../../assets/img/fechar.png";
 import api from "../../../../services/api";
 import { MenuAdmin } from "../../MenuAdmin";
 import {
-  DivButton, DivClient, DivContainer, DivInfo, DivInfoPedido, DivInfos, DivRemove, Main, Section
+  DivButton, DivClient, DivContainer, DivEditar, DivInfo, DivInfoPedido, DivInfos, DivRemove, Main, Section
 } from "./style";
 export const ListarClientes = () => {
    const [clientes,setClientes] = useState([])
@@ -34,10 +35,21 @@ export const ListarClientes = () => {
                 {clientes?.map((cliente,index) => (
                   <DivInfo key={index}> 
                 
-                    <DivClient>
-                      <DivRemove onClick={() => {excluirCliente(cliente?.id)}}>
-                        <img src={remove} alt="" />
-                      </DivRemove>
+                      <DivClient>
+                        <div className="btns">
+
+                        <Link to={`/admin/cliente/${cliente?.id}/editar`}>
+                            <DivEditar>
+                              <img src={editar} alt="" />   
+                            </DivEditar>
+                          </Link>
+
+                            <DivRemove onClick={() => {excluirCliente(cliente?.id)}}>
+                              <img src={remove} alt="" />
+                            </DivRemove>
+                      </div>
+                  
+
                       <h2>DADOS CLIENTE</h2>
                       <span>CODIGO CLIENTE: {cliente?.id}</span>
                       <span>CPF: {cliente?.cpf}</span> 

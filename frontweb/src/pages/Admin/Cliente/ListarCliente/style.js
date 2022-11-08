@@ -196,6 +196,19 @@ export const DivInfos = styled.div`
 
 
 `
+
+export const DivEditar = styled.div`
+
+  display: flex;
+  cursor: pointer;
+
+  img  {
+    height: 2.5rem;
+    margin-right: 1rem;
+  }
+
+
+`
 export const DivInfo = styled.div`
 
     height: 40rem;
@@ -227,6 +240,12 @@ export const DivClient = styled.div`
     span {
       font-size: 1.4rem;
     
+    }
+
+    .btns {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 2rem;
     }
 
 `
