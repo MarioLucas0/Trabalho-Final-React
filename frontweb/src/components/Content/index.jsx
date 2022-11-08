@@ -1,5 +1,4 @@
 import { Route, Routes } from 'react-router-dom';
-import { Login } from "../../../src/pages/Login/index";
 import { Admin } from '../../pages/Admin/Admin';
 import { AtualizarProduto } from '../../pages/Admin/AtualizarProduto';
 import { CadastroProduto } from '../../pages/Admin/CadastroProduto';
@@ -46,9 +45,8 @@ export const Content = () => (
       <Route path="/admin/pedido/listar/id" element={<ListarPedidosId />} />
       <Route path="/admin/categoria" element={ <CategoriaInfo />} />
       <Route path="/catalogo/:id" element={ <ProdutoInfo /> } />
-      {/* Bernado */}
-      <Route path="/login" element={ <Login />}/>
-   
+ 
+  
       <Route path="*" element={<NotFound />}/>
 
     </Routes>

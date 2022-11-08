@@ -6,6 +6,7 @@ import {
   DivImg, DivText, Main, Section,
   TextoPrincipal, TextoSecundario
 } from "./style";
+
 export const Home = () => (
     
   <Section>

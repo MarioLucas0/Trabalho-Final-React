@@ -54,7 +54,7 @@ export const  DivRight = styled.div`
   margin-left: 16rem;
 `
 export const  DivCard = styled.div`
-    width: 55rem;
+    width: 68%;
     height: 78rem;
     background: #FFFFFF;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
@@ -63,6 +63,8 @@ export const  DivCard = styled.div`
     padding-top: 9.7rem;
     margin: 18rem auto 22rem auto;
     text-align: center;
+    height: 100rem;
+
   h1 {
     width: 31.7rem;
     height: 6.7rem;
@@ -156,6 +158,19 @@ export const DivButton = styled.div`
     border-radius: 10px;
   }
 `
+export const DivInput2 = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+`
+export const Inputs= styled.div`
+
+  display: flex;
+  gap: 3rem;
+
+`
+
+
 
 
 export const Container = styled.div`
@@ -203,4 +218,4 @@ export const Strong = styled.strong`
     text-decoration: none;
     color: #676767;
   }
-`;
+`

@@ -15,7 +15,7 @@ export const CadastrarCategoria = () => {
         "nome":  nome,
         "descricao": descricao,
     }).then(res => {
-        
+        alert("Categoria cadastrada com Sucesso!");
       
     }) 
   }

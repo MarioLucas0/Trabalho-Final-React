@@ -10,7 +10,7 @@ export const  DivContainer = styled.div`
   width: 100%;
   display: flex;
   margin-block: 6rem;
-  margin-bottom: 34rem;
+  margin-bottom: 12rem;
 `
 
 export const DivLeft = styled.div`

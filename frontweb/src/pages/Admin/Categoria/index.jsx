@@ -68,8 +68,6 @@ export const CategoriaInfo = () => {
                 </Link>
               </DivCrud>     
               </DivInfoContainer>
-         
-          
           ))}  
           </DivContainer> 
         </Main>

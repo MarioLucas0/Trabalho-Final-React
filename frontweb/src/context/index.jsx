@@ -4,11 +4,12 @@ export const context = createContext({});
 
 export const  ContextProvider = ({ children }) => {
   const [productsCart, setProductsCart] = useState([]);
-  
+  const [clientId,setClientId] = useState("");
 
   function handleAddItemToCart(produto) {
     const itemObject = [...productsCart];
     const item = itemObject.find((product) => product.id === produto.id);
+   
     if (!item) {
       
       itemObject.push({
@@ -70,7 +71,9 @@ export const  ContextProvider = ({ children }) => {
         removerItem,
         removalItem,
         clearCart,
-        aumentarItem
+        aumentarItem,
+        clientId,
+        setClientId
        
       }}
     >
