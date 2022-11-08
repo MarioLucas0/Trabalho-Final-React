@@ -4,11 +4,13 @@ export const context = createContext({});
 
 export const  ContextProvider = ({ children }) => {
   const [productsCart, setProductsCart] = useState([]);
-  const [clientId,setClientId] = useState("");
+  const [clientId2,setClientId] = useState("");
 
   function handleAddItemToCart(produto) {
     const itemObject = [...productsCart];
     const item = itemObject.find((product) => product.id === produto.id);
+
+   
    
     if (!item) {
       
@@ -19,11 +21,13 @@ export const  ContextProvider = ({ children }) => {
         valorUnitario: produto.valorUnitario,
         descricao: produto.descricao,
         quantidade: 1,
-    
+        clientId: clientId2
       });
     } 
+    
     setProductsCart(itemObject);
   }
+
 
   function aumentarItem(produto){
     const itemObject = [...productsCart];
@@ -60,7 +64,9 @@ export const  ContextProvider = ({ children }) => {
 
   
   function clearCart() {
+    console.log(productsCart)
     setProductsCart([]);
+
   }
 
   return (
@@ -72,7 +78,7 @@ export const  ContextProvider = ({ children }) => {
         removalItem,
         clearCart,
         aumentarItem,
-        clientId,
+        clientId2,
         setClientId
        
       }}

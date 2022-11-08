@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 import { Admin } from '../../pages/Admin/Admin';
 import { AtualizarProduto } from '../../pages/Admin/AtualizarProduto';
 import { CadastroProduto } from '../../pages/Admin/CadastroProduto';

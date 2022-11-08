@@ -40,12 +40,10 @@ const Signup = () => {
   }
   }).then(res => {
      console.log(res.data?.id)
-     ctx.setClientId(res.data?.id)
-    
+     ctx.setClientId(res.data?.id)  
   }) 
   }
-  
- 
+
    const  handleSignup =  () => {
     if (!email | !emailConf | !senha) {
       setError("Preencha todos os campos");
@@ -61,8 +59,9 @@ const Signup = () => {
       setError(res);
       return;
     }
+   
+ 
     cadastrarCliente()
-    //ctx.setClientId()
     alert("Usuário cadatrado com sucesso!");
     //navigate("/");
   };
@@ -93,11 +92,13 @@ const Signup = () => {
                   value={senha}
                   onChange={(e) => [setSenha(e.target.value), setError("")]}
                 />
+                     <Input type="text" value={nome} placeholder="Digite seu nome" onChange={(e) => setNome(e.target.value)} />
+                     <Input type="text" value={cpf} placeholder="Digite seu Cpf" onChange={(e) => setCpf(e.target.value)}/>
               <C.labelError>{error}</C.labelError>
             </DivInput>
             <DivInput2>
-            <Input type="text" value={nome} placeholder="Digite seu nome" onChange={(e) => setNome(e.target.value)} />
-                          <Input type="text" value={cpf} placeholder="Digite seu Cpf" onChange={(e) => setCpf(e.target.value)}/>
+       
+               
                           <Input type="text" value={dataNascimento} placeholder="Digite a data de nascimento" onChange={(e) => setDataNascimento(e.target.value)}/>
                           <Input type="text" value={numero} placeholder="Digite o numero da casa" onChange={(e) => setNumero(e.target.value)}/>
 

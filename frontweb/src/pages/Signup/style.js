@@ -64,6 +64,9 @@ export const  DivCard = styled.div`
     margin: 18rem auto 22rem auto;
     text-align: center;
     height: 100rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
   h1 {
     width: 31.7rem;
@@ -136,6 +139,7 @@ export const DivButton = styled.div`
   border-radius: 10px;
   cursor: pointer;
   margin-bottom: 2rem;
+  margin-top: 3rem;
   p{
     width: 80%;
     font-weight: 700;
@@ -167,11 +171,9 @@ export const Inputs= styled.div`
 
   display: flex;
   gap: 3rem;
+  justify-content: center;
 
 `
-
-
-
 
 export const Container = styled.div`
   display: flex;

@@ -1,9 +1,8 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import imgLogin from "../../assets/img/login.svg";
 import Seta from "../../assets/img/Seta.svg";
 import Input from "../../components/Input";
-import { context } from "../../context";
 import useAuth from "../../hooks/useAuth.js";
 import * as C from "./style";
 import {
@@ -18,13 +17,12 @@ const Signin = () => {
   const [senha, setSenha] = useState("");
   const [error, setError] = useState("");
 
-  const ctx = useContext(context)
+
   const handleLogin = () => {
     if (!email | !senha) {
       setError("Preencha todos os campos");
       return;
     }
-
     const res = signin(email, senha);
 
     if (res) {
@@ -33,6 +31,8 @@ const Signin = () => {
     }
     navigate("/home");
   };
+
+
 
   return (
   
@@ -49,7 +49,7 @@ const Signin = () => {
       <DivRight>
         <DivCard>
             <h1>LOGIN</h1>
-            {ctx?.clientId}
+          
             <DivInput>
                   <Input
                 type="email"
