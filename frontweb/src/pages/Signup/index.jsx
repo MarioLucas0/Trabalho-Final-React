@@ -102,7 +102,7 @@ const Signup = () => {
             <DivInput2>
        
                
-                          <Input type="text" value={dataNascimento} placeholder="Digite a data de nascimento" onChange={(e) => setDataNascimento(e.target.value)}/>
+                          <Input type="text" value={dataNascimento} placeholder="Digite a data de nascimento (YYYY-MM-DD)" onChange={(e) => setDataNascimento(e.target.value)}/>
                           <Input type="text" value={numero} placeholder="Digite o numero da casa" onChange={(e) => setNumero(e.target.value)}/>
 
                           <Input type="text" value={complemento} placeholder="Digite o complemento " onChange={(e) => setComplemento(e.target.value)}/>
