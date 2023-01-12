@@ -40,7 +40,7 @@ const Signin = () => {
     <Section>
     <DivContainer>
       <DivLeft>
-          <h1>Divulgue seus produtos no DS Catalog</h1>
+          <h1>Divulgue seus produtos no SerraComerce</h1>
           <p>Faça parte do nosso catálogo de divulgação e aumente a venda dos seus produtos.</p>
           <DivImg>
             <img src={imgLogin} alt="" />
