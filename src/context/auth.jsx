@@ -4,6 +4,8 @@ export const AuthContext = createContext({});
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState();
+  const [authenticated,setAuthenticated] = useState(false)
+  const [logado,setLogado] = useState(false)
 
   useEffect(() => {
     const userToken = localStorage.getItem("user_token");
@@ -16,6 +18,7 @@ export const AuthProvider = ({ children }) => {
 
       if (hasUser) setUser(hasUser[0]);
     }
+    setLogado(authenticated)
   }, []);
 
   const signin = (email, password) => {
@@ -28,6 +31,7 @@ export const AuthProvider = ({ children }) => {
         const token = Math.random().toString(36).substring(2);
         localStorage.setItem("user_token", JSON.stringify({ email, token }));
         setUser({ email, password });
+        setAuthenticated(true)
         return;
       } else {
         return "E-mail ou senha incorretos";
@@ -66,7 +70,7 @@ export const AuthProvider = ({ children }) => {
 
   return (
     <AuthContext.Provider
-      value={{ user, signed: !!user, signin, signup, signout }}
+      value={{ user, authenticated: !!user, signin, signup, signout,authenticated,logado}}
     >
       {children}
     </AuthContext.Provider>

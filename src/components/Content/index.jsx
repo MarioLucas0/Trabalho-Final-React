@@ -1,5 +1,6 @@
-import { Route, Routes } from 'react-router-dom';
-import useAuth from '../../hooks/useAuth';
+import { useContext, useEffect } from 'react';
+import { Navigate, Route, Routes } from 'react-router-dom';
+import { AuthContext } from "../../context/auth";
 import { Admin } from '../../pages/Admin/Admin';
 import { AtualizarProduto } from '../../pages/Admin/AtualizarProduto';
 import { CadastroProduto } from '../../pages/Admin/CadastroProduto';
@@ -19,27 +20,34 @@ import Signin from '../../pages/Signin';
 import Signup from '../../pages/Signup';
 
 import { ProdutoInfo } from '../ProdutoInfo';
-
-
-const Private = ({ Item }) => {
-  const { signed } = useAuth();
-
-  return signed > 0 ? <Item /> : <Signin />;
-};
-
-
-
-export const Content = () => (
   
 
+export const Content = () => {
+  const { authenticated } = useContext(AuthContext);
+  const Private = ({children}) => {
+   
+    
+    if(!authenticated) {
+      
+      return <Navigate to="/" />
+    }
+  
+    return children
+  }
+  
+  
+   useEffect(() => {
+    console.log(authenticated)
+  },[]) 
+  return (
     <Routes>
-      <Route exact path="/home" element={<Private Item={Home} />} />
+      <Route exact path="/home" element={<Private> <Home/> </Private> } />
       <Route path="/" element={<Signin />} />
       <Route exact path="/signup" element={<Signup />} />
       <Route path="*" element={<Signin />} />
-      <Route path="/catalogo" element={ <Catalogo /> } />
-      <Route path="/catalogo/carrinho" element={ <CarrinhoCompras />} />
-      <Route path="/admin/produto" element={ <Admin /> } />
+      <Route path="/catalogo" element={ <Private> <Catalogo /> </Private>} />
+      <Route path="/catalogo/carrinho" element={ <Private> <CarrinhoCompras /></Private> } />
+      <Route path="/admin/produto" element={<Private> <Admin /> </Private>  } />
       <Route path="/admin/produto/cadastro" element={ <CadastroProduto /> } />
       <Route path="/admin/produto/:id/atualizar" element={ <AtualizarProduto /> } />
       <Route path="/admin/categoria/cadastrar" element={ <CadastrarCategoria /> } />
@@ -53,7 +61,8 @@ export const Content = () => (
       <Route path="/catalogo/:id" element={ <ProdutoInfo /> } />
       <Route path="*" element={<NotFound />}/>
     </Routes>
+  )
   
 
-);
+};
 
