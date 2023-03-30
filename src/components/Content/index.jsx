@@ -1,6 +1,4 @@
-import { useContext, useEffect } from 'react';
-import { Navigate, Route, Routes } from 'react-router-dom';
-import { AuthContext } from "../../context/auth";
+import { Route, Routes } from 'react-router-dom';
 import { Admin } from '../../pages/Admin/Admin';
 import { AtualizarProduto } from '../../pages/Admin/AtualizarProduto';
 import { CadastroProduto } from '../../pages/Admin/CadastroProduto';
@@ -23,31 +21,17 @@ import { ProdutoInfo } from '../ProdutoInfo';
   
 
 export const Content = () => {
-  const { authenticated } = useContext(AuthContext);
-  const Private = ({children}) => {
-   
-    
-    if(!authenticated) {
-      
-      return <Navigate to="/" />
-    }
-  
-    return children
-  }
-  
-  
-   useEffect(() => {
-    console.log(authenticated)
-  },[]) 
+
+
   return (
     <Routes>
-      <Route exact path="/home" element={<Private> <Home/> </Private> } />
+      <Route exact path="/home" element={ <Home/>  } />
       <Route path="/" element={<Signin />} />
       <Route exact path="/signup" element={<Signup />} />
       <Route path="*" element={<Signin />} />
-      <Route path="/catalogo" element={ <Private> <Catalogo /> </Private>} />
-      <Route path="/catalogo/carrinho" element={ <Private> <CarrinhoCompras /></Private> } />
-      <Route path="/admin/produto" element={<Private> <Admin /> </Private>  } />
+      <Route path="/catalogo" element={  <Catalogo /> } />
+      <Route path="/catalogo/carrinho" element={  <CarrinhoCompras /> } />
+      <Route path="/admin/produto" element={ <Admin />   } />
       <Route path="/admin/produto/cadastro" element={ <CadastroProduto /> } />
       <Route path="/admin/produto/:id/atualizar" element={ <AtualizarProduto /> } />
       <Route path="/admin/categoria/cadastrar" element={ <CadastrarCategoria /> } />

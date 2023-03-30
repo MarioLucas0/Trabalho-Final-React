@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Desenho from '../../assets/img/Desenho.svg';
 import Seta from '../../assets/img/Seta.svg';
@@ -17,9 +17,11 @@ import {
 
 export const Home = () => {
   const ctx = useContext(context)
+  const [openModal, setOpenModal] = useState(false)
 
   useEffect(() => {
     console.log(ctx?.clientId2)
+    setOpenModal(true)
   },[])
     
   return (
@@ -49,7 +51,11 @@ export const Home = () => {
               <img src={Desenho} alt="" />
             </DivImg>
           </DivContainer>
+          
         </Main>
+        <ModalAviso isOpen={openModal} setModalOpen={() => setOpenModal(!openModal)}>
+        Conteúdo do modal
+      </ModalAviso>
       </Section>
     );
   }
