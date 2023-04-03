@@ -35,7 +35,7 @@ export default function ModalAviso({ isOpen, setModalOpen, children }) {
             x
           </div>
           <div>
-            <p style={P}>Atualmente, o backend do projeto está fora do ar! Agradeço a compreensão.</p>
+            <p style={P}>Atualmente, esse projeto esta fora do Ar do projeto está fora do ar! Agradeço a compreensão.</p>
             <img src={fora} alt="" />
           </div>
         </div>
